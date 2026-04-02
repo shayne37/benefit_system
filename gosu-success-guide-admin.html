@@ -349,7 +349,6 @@
         <div class="tbl-ctrl">
           <div class="result-count">총 <strong>38개</strong> Benefit 이벤트</div>
           <div class="tbl-actions">
-            <button class="btn-secondary" onclick="showBenefitDashboard()">Benefit 관리 대시보드</button>
             <button class="btn-primary" onclick="showBenefitRegister()">+ Benefit 등록</button>
           </div>
         </div>
@@ -391,48 +390,55 @@
         <div class="subhead">
           <div>
             <h1>고수 Benefit 관리</h1>
-            <div class="subhead-copy">Benefit 관리 탭 진입 시 가장 먼저 보는 대시보드입니다. PRD의 요구사항에 맞춰 <strong>이벤트 목록, 노출 권한, 상태, 최근 수정 정보, 관리 액션</strong>을 한 화면에 모았습니다.</div>
           </div>
         </div>
-        <div class="form-shell">
-          <div>
-            <div class="info-banner">초기 진입 시 10개를 노출하고 이후 페이지네이션 처리합니다. 권한은 <strong>CSOutsourcingManager</strong>에게 허용하고 <strong>CSOutsourcingEmployee</strong>는 제외한 설정을 반영했습니다.</div>
-            <div class="tbl-wrap">
-              <div class="pg-row"><span>목록 노출</span><select><option>10</option><option>20</option></select><button class="pg-btn">‹</button><button class="pg-btn">›</button></div>
-              <table>
-                <thead>
-                  <tr>
-                    <th style="width:64px">No.</th>
-                    <th style="width:180px">이벤트 코드</th>
-                    <th>이벤트명</th>
-                    <th style="width:110px">유형</th>
-                    <th style="width:120px">누적 수혜 고수</th>
-                    <th style="width:132px">최근 수정일자</th>
-                    <th style="width:104px">최근 등록자</th>
-                    <th style="width:88px; text-align:center">관리</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  ${benefitRows.map((row, idx) => `
-                    <tr>
-                      <td>${row.no}</td>
-                      <td>${row.code}</td>
-                      <td>${row.name}</td>
-                      <td>${typeTag(row.type)}</td>
-                      <td>${[128, 84, 56, 41][idx]}명</td>
-                      <td>${row.updated}</td>
-                      <td>${row.editor}</td>
-                      <td style="text-align:center">${row.editable ? '<button class="act-edit" onclick="showBenefitRegister(true)">수정</button>' : '<button class="act-edit" onclick="showBenefitRegister(true)">상세</button>'}</td>
-                    </tr>
-                  `).join('')}
-                </tbody>
-              </table>
+        <div class="search-card">
+          <div class="search-row">
+            <div class="fg"><label>Benefit 이벤트명</label><input type="text" placeholder="이벤트명 검색" style="width:240px"></div>
+            <div class="fg"><label>상태</label><select style="width:130px"><option>전체</option><option>대기</option><option>진행 중</option><option>종료</option></select></div>
+            <div class="fg"><label>활성화 여부</label><select style="width:120px"><option>전체</option><option>On</option><option>Off</option></select></div>
+            <div class="fg"><label>견적 종류</label><select style="width:140px"><option>전체</option><option>일반견적</option><option>스마트견적</option></select></div>
+            <div class="fg">
+              <label>서비스명</label>
+              <div class="search-select">
+                <input class="search-select-input" type="text" placeholder="서비스를 입력해주세요">
+                <div class="search-select-tools"><span>⌄</span></div>
+              </div>
             </div>
           </div>
+          <div class="search-row">
+            <div class="btn-group"><button class="btn btn-reset">초기화</button><button class="btn btn-search">검색</button></div>
+          </div>
         </div>
-        <div class="form-footer">
-          <button class="btn-back" onclick="showPromotionView()">프로모션 관리로</button>
-          <button class="btn-save" onclick="showBenefitRegister()">+ Benefit 등록</button>
+        <div class="tbl-ctrl">
+          <div class="result-count">총 <strong>38개</strong> Benefit 이벤트</div>
+          <div class="tbl-actions">
+            <button class="btn-primary" onclick="showBenefitRegister()">+ Benefit 등록</button>
+          </div>
+        </div>
+        <div class="tbl-wrap">
+          <div class="pg-row"><span>페이지당 크기</span><select><option>10</option><option>20</option><option>50</option></select><button class="pg-btn">‹</button><button class="pg-btn">›</button></div>
+          <table>
+            <thead>
+              <tr>
+                <th style="width:56px">No.</th>
+                <th style="width:240px">Benefit 이벤트명</th>
+                <th style="width:120px">견적 종류</th>
+                <th style="width:180px">서비스</th>
+                <th style="width:110px">노출 고수 수</th>
+                <th style="width:110px">적용 고수 수</th>
+                <th style="width:136px">시작일자</th>
+                <th style="width:136px">종료일자</th>
+                <th style="width:92px">상태</th>
+                <th style="width:108px">활성화</th>
+                <th style="width:132px">최근 수정일자</th>
+                <th style="width:104px">최근 등록자</th>
+                <th style="width:80px; text-align:center">관리</th>
+              </tr>
+            </thead>
+            <tbody>${benefitTableRows()}</tbody>
+          </table>
+          <div class="pg-row bottom"><span>페이지당 크기</span><select><option>10</option><option>20</option><option>50</option></select><button class="pg-btn">‹</button><button class="pg-btn">›</button></div>
         </div>
       `;
     }
@@ -574,7 +580,7 @@
         </div>
         <div class="form-footer">
           <button class="btn-back" onclick="showBenefitDashboard()">대시보드로</button>
-          <button class="btn-save">${isEdit ? '수정완료' : '등록완료'}</button>
+          <button class="btn-save">${isEdit ? '수정' : '등록'}</button>
         </div>
       `;
     }
