@@ -85,6 +85,26 @@
       width:100%; height:40px; display:flex; align-items:center; padding:0 12px;
       border:1px solid #e5e7eb; border-radius:8px; background:#f9fafb; color:#6b7280; font-size:14px;
     }
+    .metric-panel {
+      border:1px solid #e5e7eb; border-radius:12px; background:#fbfcfe; padding:18px;
+    }
+    .metric-copy {
+      font-size:12.5px; color:#6b7280; line-height:1.6; margin-bottom:14px;
+    }
+    .metric-grid {
+      display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:12px;
+    }
+    .metric-card {
+      border:1px solid #e5e7eb; border-radius:12px; background:#f9fafb; padding:16px;
+    }
+    .metric-label {
+      display:block; font-size:12px; font-weight:700; color:#6b7280; margin-bottom:8px;
+    }
+    .metric-value {
+      display:flex; align-items:center; min-height:44px; padding:0 12px;
+      border:1px solid #e5e7eb; border-radius:10px; background:#f3f4f6;
+      font-size:24px; font-weight:800; color:#6b7280; line-height:1;
+    }
     .radio-card-row { display:flex; gap:12px; flex-wrap:wrap; margin-bottom:18px; }
     .radio-card {
       display:flex; align-items:center; gap:10px; min-height:44px; padding:0 14px;
@@ -196,6 +216,7 @@
     @media (max-width: 1180px) {
       .form-shell { grid-template-columns:1fr; }
       .form-footer { max-width:none; }
+      .metric-grid { grid-template-columns:1fr; }
     }
     @media (max-width: 860px) {
       body { display:block; }
@@ -251,10 +272,10 @@
 
   <script>
     const benefitRows = [
-      { no: 38, code: 'BENEFIT-240401-01', name: '이사/청소 서울 강남 재진입 부스팅', type: 'Payback', quoteType: '스마트견적', service: '국내 이사 외 1개', exposedPros: '1,284명', appliedPros: '386명', start: '2026-04-03 09:00', end: '2026-04-17 23:59', status: '진행 중', active: true, updated: '2026-04-02 10:42', editor: 'Shayne Kim', editable: false },
-      { no: 37, code: 'BENEFIT-240328-02', name: '가전설치 신규 고수 초기 견적 유도', type: '캐시 지급', quoteType: '일반견적', service: '가전설치', exposedPros: '842명', appliedPros: '214명', start: '2026-04-05 00:00', end: '2026-04-30 23:59', status: '대기', active: true, updated: '2026-04-01 18:05', editor: 'Shayne Kim', editable: true },
-      { no: 36, code: 'BENEFIT-240320-03', name: '도배/장판 지방권 응답 회복', type: '수수료 할인', quoteType: '일반견적', service: '도배장판 시공', exposedPros: '563명', appliedPros: '121명', start: '2026-03-20 00:00', end: '2026-03-31 23:59', status: '종료', active: false, updated: '2026-03-31 09:48', editor: 'Shayne Kim', editable: true },
-      { no: 35, code: 'BENEFIT-240315-07', name: '웨딩 본식 촬영 고수 확보 캠페인', type: 'Payback', quoteType: '스마트견적', service: '웨딩스냅 촬영', exposedPros: '418명', appliedPros: '97명', start: '2026-04-08 10:00', end: '2026-05-08 23:59', status: '대기', active: false, updated: '2026-03-30 11:12', editor: 'Shayne Kim', editable: true }
+      { no: 38, code: 'BENEFIT-240401-01', name: '이사/청소 서울 강남 재진입 부스팅', type: 'Payback', quoteType: '스마트견적', service: '국내 이사 외 1개', exposedPros: '1,284명', appliedPros: '386명', appliedQuotes: '912건', start: '2026-04-03 09:00', end: '2026-04-17 23:59', status: '진행 중', active: true, updated: '2026-04-02 10:42', editor: 'Shayne Kim', editable: false },
+      { no: 37, code: 'BENEFIT-240328-02', name: '가전설치 신규 고수 초기 견적 유도', type: '캐시 지급', quoteType: '일반견적', service: '가전설치', exposedPros: '842명', appliedPros: '214명', appliedQuotes: '436건', start: '2026-04-05 00:00', end: '2026-04-30 23:59', status: '대기', active: true, updated: '2026-04-01 18:05', editor: 'Shayne Kim', editable: true },
+      { no: 36, code: 'BENEFIT-240320-03', name: '도배/장판 지방권 응답 회복', type: '수수료 할인', quoteType: '일반견적', service: '도배장판 시공', exposedPros: '563명', appliedPros: '121명', appliedQuotes: '205건', start: '2026-03-20 00:00', end: '2026-03-31 23:59', status: '종료', active: false, updated: '2026-03-31 09:48', editor: 'Shayne Kim', editable: true },
+      { no: 35, code: 'BENEFIT-240315-07', name: '웨딩 본식 촬영 고수 확보 캠페인', type: 'Payback', quoteType: '스마트견적', service: '웨딩스냅 촬영', exposedPros: '418명', appliedPros: '97명', appliedQuotes: '166건', start: '2026-04-08 10:00', end: '2026-05-08 23:59', status: '대기', active: false, updated: '2026-03-30 11:12', editor: 'Shayne Kim', editable: true }
     ];
 
     function setActiveMenu(key) {
@@ -302,6 +323,7 @@
           <td>${row.service}</td>
           <td>${row.exposedPros}</td>
           <td>${row.appliedPros}</td>
+          <td>${row.appliedQuotes}</td>
           <td>${row.start}</td>
           <td>${row.end}</td>
           <td>${statusTag(row.status)}</td>
@@ -363,6 +385,7 @@
                 <th style="width:180px">서비스</th>
                 <th style="width:110px">노출 고수 수</th>
                 <th style="width:110px">적용 고수 수</th>
+                <th style="width:110px">적용 견적 수</th>
                 <th style="width:136px">시작일자</th>
                 <th style="width:136px">종료일자</th>
                 <th style="width:92px">상태</th>
@@ -427,6 +450,7 @@
                 <th style="width:180px">서비스</th>
                 <th style="width:110px">노출 고수 수</th>
                 <th style="width:110px">적용 고수 수</th>
+                <th style="width:110px">적용 견적 수</th>
                 <th style="width:136px">시작일자</th>
                 <th style="width:136px">종료일자</th>
                 <th style="width:92px">상태</th>
@@ -564,15 +588,25 @@
                   <input type="text" ${isEdit ? 'value="2026-04-30 23:59"' : 'placeholder="yyyy-mm-dd hh:mm"'}>
                   <div class="hint">미입력 시 상시노출됩니다</div>
                 </div>
-                <div class="ff">
-                  <label>노출 고수 수</label>
-                  <div class="readonly-box">${isEdit ? '842' : '0'}</div>
-                  <div class="hint">이벤트 시작일부터 종료일까지의 누적 수치를 확인할 수 있으며, 종료 이후에는 최종 확정된 고수 수를 확인할 수 있습니다.</div>
-                </div>
-                <div class="ff">
-                  <label>적용 고수 수</label>
-                  <div class="readonly-box">${isEdit ? '214' : '0'}</div>
-                  <div class="hint">이벤트 시작일부터 종료일까지의 누적 수치를 확인할 수 있으며, 종료 이후에는 최종 확정된 고수 수를 확인할 수 있습니다.</div>
+                <div class="ff full">
+                  <label>성과 현황</label>
+                  <div class="metric-panel">
+                    <div class="metric-copy">이벤트 시작일부터 종료일까지의 누적 수치를 확인할 수 있으며, 종료 이후에는 최종 확정된 고수 수를 확인할 수 있습니다.</div>
+                    <div class="metric-grid">
+                      <div class="metric-card">
+                        <span class="metric-label">노출 고수 수</span>
+                        <div class="metric-value">${isEdit ? '842' : '0'}</div>
+                      </div>
+                      <div class="metric-card">
+                        <span class="metric-label">적용 고수 수</span>
+                        <div class="metric-value">${isEdit ? '214' : '0'}</div>
+                      </div>
+                      <div class="metric-card">
+                        <span class="metric-label">적용 견적 수</span>
+                        <div class="metric-value">${isEdit ? '436' : '0'}</div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
