@@ -160,6 +160,11 @@
     .label-required { background:#fff1f2; color:#e11d48; }
     .label-guide { background:#eff6ff; color:#2563eb; }
     .label-knowhow { background:#ecfdf5; color:#059669; }
+    .note-warning {
+      display:inline-flex; align-items:center; min-height:26px; padding:4px 10px;
+      border-radius:999px; background:#fef2f2; border:1px solid #fecaca; color:#dc2626;
+      font-size:12px; font-weight:700;
+    }
     .tgl-wrap { display:flex; align-items:center; gap:8px; }
     .tgl { position:relative; width:40px; height:22px; cursor:pointer; display:inline-block; flex-shrink:0; }
     .tgl input { opacity:0; width:0; height:0; position:absolute; }
@@ -272,10 +277,10 @@
 
   <script>
     const benefitRows = [
-      { no: 38, code: 'BENEFIT-240401-01', name: '이사/청소 서울 강남 재진입 부스팅', type: 'Payback', quoteType: '스마트견적', service: '국내 이사 외 1개', start: '2026-04-03 09:00', end: '2026-04-17 23:59', status: '진행 중', active: true, updated: '2026-04-02 10:42', editor: 'Shayne Kim', editable: false },
-      { no: 37, code: 'BENEFIT-240328-02', name: '가전설치 신규 고수 초기 견적 유도', type: '캐시 지급', quoteType: '일반견적', service: '가전설치', start: '2026-04-05 00:00', end: '2026-04-30 23:59', status: '대기', active: true, updated: '2026-04-01 18:05', editor: 'Shayne Kim', editable: true },
-      { no: 36, code: 'BENEFIT-240320-03', name: '도배/장판 지방권 응답 회복', type: '수수료 할인', quoteType: '일반견적', service: '도배장판 시공', start: '2026-03-20 00:00', end: '2026-03-31 23:59', status: '종료', active: false, updated: '2026-03-31 09:48', editor: 'Shayne Kim', editable: true },
-      { no: 35, code: 'BENEFIT-240315-07', name: '웨딩 본식 촬영 고수 확보 캠페인', type: 'Payback', quoteType: '스마트견적', service: '웨딩스냅 촬영', start: '2026-04-08 10:00', end: '2026-05-08 23:59', status: '대기', active: false, updated: '2026-03-30 11:12', editor: 'Shayne Kim', editable: true }
+      { no: 38, code: 'BENEFIT-240401-01', name: '이사/청소 서울 강남 재진입 부스팅', type: 'Payback', quoteType: '스마트견적', service: '국내 이사 외 1개', start: '2026-04-03 09:00', end: '2026-04-17 23:59', status: '진행 중', active: true, updated: '2026-04-02 10:42', editor: 'Shayne Kim', note: '', editable: false },
+      { no: 37, code: 'BENEFIT-240328-02', name: '가전설치 신규 고수 초기 견적 유도', type: '캐시 지급', quoteType: '일반견적', service: '가전설치', start: '2026-04-05 00:00', end: '2026-04-30 23:59', status: '대기', active: true, updated: '2026-04-01 18:05', editor: 'Shayne Kim', note: '개발 문의 필요', editable: true },
+      { no: 36, code: 'BENEFIT-240320-03', name: '도배/장판 지방권 응답 회복', type: '수수료 할인', quoteType: '일반견적', service: '도배장판 시공', start: '2026-03-20 00:00', end: '2026-03-31 23:59', status: '종료', active: false, updated: '2026-03-31 09:48', editor: 'Shayne Kim', note: '', editable: true },
+      { no: 35, code: 'BENEFIT-240315-07', name: '웨딩 본식 촬영 고수 확보 캠페인', type: 'Payback', quoteType: '스마트견적', service: '웨딩스냅 촬영', start: '2026-04-08 10:00', end: '2026-05-08 23:59', status: '대기', active: false, updated: '2026-03-30 11:12', editor: 'Shayne Kim', note: '', editable: true }
     ];
 
     function setActiveMenu(key) {
@@ -327,6 +332,7 @@
           <td>${toggleTag(row.active)}</td>
           <td>${row.updated}</td>
           <td>${row.editor}</td>
+          <td>${row.note ? '<span class="note-warning">' + row.note + '</span>' : ''}</td>
           <td style="text-align:center">
             ${row.editable
               ? '<button class="act-edit" onclick="showBenefitRegister(true)">수정</button>'
@@ -386,6 +392,7 @@
                 <th style="width:108px">활성화</th>
                 <th style="width:132px">최근 수정일자</th>
                 <th style="width:104px">최근 등록자</th>
+                <th style="width:140px">비고</th>
                 <th style="width:80px; text-align:center">관리</th>
               </tr>
             </thead>
@@ -448,6 +455,7 @@
                 <th style="width:108px">활성화</th>
                 <th style="width:132px">최근 수정일자</th>
                 <th style="width:104px">최근 등록자</th>
+                <th style="width:140px">비고</th>
                 <th style="width:80px; text-align:center">관리</th>
               </tr>
             </thead>
@@ -499,6 +507,9 @@
                   <span>2. 조건선택</span>
                 </button>
               </div>
+              ${benefitConditionMode === 'filter' ? `
+                <div class="hint" style="margin-bottom:18px;">서비스가 진행된 이후에는 수정이 불가합니다</div>
+              ` : ''}
               ${benefitConditionMode === 'csv' ? `
                 <div class="ff-grid">
                   <div class="ff full">
@@ -508,8 +519,8 @@
                       <button type="button" class="upload-mode-btn">교체</button>
                     </div>
                     <div class="upload-guide">
-                      <div>추가: 기존에 업로드된 고수에서 새로운 고수가 추가됩니다. (중복 제거 필수)</div>
-                      <div>교체: 기존에 업로드된 고수는 삭제되고, 새로운 고수로 대체됩니다.</div>
+                      <div>추가: 기존에 업로드된 대상자에 새로운 대상자가 추가됩니다. (중복 제거 필수)</div>
+                      <div>교체: 기존에 업로드된 대상자는 삭제되고, 새로운 대상자로 대체됩니다. / 서비스가 진행된 이후에는 수정이 불가합니다</div>
                       <div>신규 등록: 최초 등록의 경우, 추가/교체 구분 없이 모두 등록 가능합니다.</div>
                     </div>
                     <div class="upload-box">
