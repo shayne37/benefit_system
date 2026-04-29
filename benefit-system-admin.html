@@ -514,15 +514,6 @@
                 <div class="ff-grid">
                   <div class="ff full">
                     <label>CSV 업로드 <span class="req">*</span></label>
-                    <div class="upload-mode-row">
-                      <button type="button" class="upload-mode-btn active">추가</button>
-                      <button type="button" class="upload-mode-btn">교체</button>
-                    </div>
-                    <div class="upload-guide">
-                      <div>추가: 기존에 업로드된 대상자에 새로운 대상자가 추가됩니다. (중복 제거 필수)</div>
-                      <div>교체: 기존에 업로드된 대상자는 삭제되고, 새로운 대상자로 대체됩니다. / 서비스가 진행된 이후에는 수정이 불가합니다</div>
-                      <div>신규 등록: 최초 등록의 경우, 추가/교체 구분 없이 모두 등록 가능합니다.</div>
-                    </div>
                     <div class="upload-box">
                       <div class="upload-actions">
                         <button type="button" class="upload-btn">파일 선택</button>
@@ -531,7 +522,7 @@
                       <div class="upload-meta">
                         <div>파일 형식 : CSV, XLSX</div>
                         <div>파일 용량 : 최대 10MB</div>
-                        <div>CSV 템플릿 다운로드 후 파일 업로드</div>
+                        <div>CSV를 재업로드하면 기존에 등록된 고수는 유지되고, 새로운 고수만 추가됩니다</div>
                       </div>
                     </div>
                   </div>
@@ -597,12 +588,17 @@
             </div>
 
             <div class="form-card">
-              <div class="form-card-title">노출 정보</div>
+              <div class="form-card-title">노출 및 혜택 설정</div>
               <div class="ff-grid">
                 <div class="ff">
                   <label>노출 시작일 <span class="req">*</span></label>
                   <input type="text" ${isEdit ? 'value="2026-04-05 00:00"' : 'placeholder="yyyy-mm-dd hh:mm"'}>
                   <div class="hint">활성화되어 있다면 노출 시작일에 사용자에게 자동 노출됩니다</div>
+                  <div style="margin-top:16px;">
+                    <label>페이백 % <span class="req">*</span></label>
+                    <input type="number" min="0" step="1" ${isEdit ? 'value="10"' : 'placeholder="정수값 입력"'}>
+                    <div class="hint">정수값만 입력 가능합니다</div>
+                  </div>
                 </div>
                 <div class="ff">
                   <label>노출 종료일 <span class="req">*</span></label>
