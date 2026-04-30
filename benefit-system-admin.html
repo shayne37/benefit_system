@@ -34,108 +34,24 @@
     .breadcrumb-sep { color:#d1d5db; }
     h1 { font-size:22px; font-weight:800; margin-bottom:22px; color:#1a202c; }
     .subhead { display:flex; justify-content:space-between; gap:16px; align-items:flex-end; margin-bottom:20px; flex-wrap:wrap; }
-    .subhead-copy { color:#6b7280; font-size:13px; line-height:1.55; }
-    .subhead-copy strong { color:#374151; }
-    .search-card, .form-card, .preview-card, .stack-card, .sort-card { background:#fff; border:1px solid #e2e8f0; border-radius:10px; }
+    .search-card, .form-card { background:#fff; border:1px solid #e2e8f0; border-radius:10px; }
     .search-card { padding:20px 22px; margin-bottom:18px; }
     .search-row { display:flex; gap:18px; align-items:flex-end; flex-wrap:wrap; }
     .search-row + .search-row { margin-top:14px; }
     .fg { display:flex; flex-direction:column; gap:5px; }
     .fg label { font-size:12px; font-weight:600; color:#555; }
-    .fg input, .fg select, .fg textarea, .ff input, .ff select, .ff textarea { border:1px solid #d1d5db; border-radius:7px; outline:none; background:#fff; color:#333; }
+    .fg input, .fg select, .ff input, .ff select { border:1px solid #d1d5db; border-radius:7px; outline:none; background:#fff; color:#333; }
     .fg input, .fg select { height:36px; padding:0 11px; font-size:13px; }
     .ff input, .ff select { width:100%; height:40px; padding:0 12px; font-size:14px; }
-    .fg textarea, .ff textarea { width:100%; min-height:110px; padding:12px; resize:vertical; font-size:14px; }
-    .fg input:focus, .fg select:focus, .fg textarea:focus, .ff input:focus, .ff select:focus, .ff textarea:focus { border-color:#693BF2; box-shadow:0 0 0 3px rgba(105,59,242,0.1); }
-    .search-select { position:relative; width:220px; }
-    .search-select-input {
-      height:36px; width:100%; padding:0 68px 0 11px; font-size:13px;
-      border:1px solid #d1d5db; border-radius:7px; outline:none; background:#fff; color:#333;
-    }
-    .search-select-input:focus { border-color:#693BF2; box-shadow:0 0 0 3px rgba(105,59,242,0.1); }
-    .search-select-tools {
-      position:absolute; top:0; right:0; height:36px; display:flex; align-items:center; gap:8px;
-      padding:0 10px; color:#6b7280; font-size:12px;
-    }
-    .search-select-menu {
-      position:absolute; top:40px; left:0; width:100%; background:#fff; border:1px solid #e5e7eb;
-      border-radius:10px; box-shadow:0 12px 30px rgba(15,23,42,0.08); overflow:hidden; z-index:10;
-    }
-    .search-option { padding:11px 14px; font-size:13px; color:#222; border-top:1px solid #f3f4f6; }
-    .search-option:first-child { border-top:none; }
-    .upload-mode-row { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:12px; }
-    .upload-mode-btn {
-      height:40px; padding:0 16px; border-radius:10px; border:1px solid #d1d5db;
-      background:#fff; color:#4b5563; font-size:14px; font-weight:600;
-    }
-    .upload-mode-btn.active { border-color:#693BF2; color:#693BF2; background:#f7f3ff; }
-    .upload-guide { display:grid; gap:4px; font-size:13px; color:#6b7280; line-height:1.55; }
-    .upload-box {
-      margin-top:16px; border:1px dashed #d1d5db; border-radius:14px; background:#fff;
-      padding:28px 16px 18px;
-    }
-    .upload-actions { display:flex; gap:12px; flex-wrap:wrap; margin-bottom:14px; }
-    .upload-btn {
-      height:40px; padding:0 18px; border-radius:10px; border:1px solid #d1d5db;
-      background:#fff; color:#374151; font-size:14px; font-weight:600;
-    }
-    .upload-meta { display:grid; gap:4px; font-size:13px; color:#6b7280; line-height:1.5; }
+    .fg input:focus, .fg select:focus, .ff input:focus, .ff select:focus { border-color:#693BF2; box-shadow:0 0 0 3px rgba(105,59,242,0.1); }
     .triple-select { display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; }
-    .readonly-box {
-      width:100%; height:40px; display:flex; align-items:center; padding:0 12px;
-      border:1px solid #e5e7eb; border-radius:8px; background:#f9fafb; color:#6b7280; font-size:14px;
-    }
-    .metric-panel {
-      border:1px solid #e5e7eb; border-radius:12px; background:#fbfcfe; padding:18px;
-    }
-    .metric-copy {
-      font-size:12.5px; color:#6b7280; line-height:1.6; margin-bottom:14px;
-    }
-    .metric-grid {
-      display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:12px;
-    }
-    .metric-card {
-      border:1px solid #e5e7eb; border-radius:12px; background:#f9fafb; padding:16px;
-    }
-    .metric-label {
-      display:block; font-size:12px; font-weight:700; color:#6b7280; margin-bottom:8px;
-    }
-    .metric-value {
-      display:flex; align-items:center; min-height:44px; padding:0 12px;
-      border:1px solid #e5e7eb; border-radius:10px; background:#f3f4f6;
-      font-size:24px; font-weight:800; color:#6b7280; line-height:1;
-    }
-    .radio-card-row { display:flex; gap:12px; flex-wrap:wrap; margin-bottom:18px; }
-    .radio-card {
-      display:flex; align-items:center; gap:10px; min-height:44px; padding:0 14px;
-      border:1px solid #d1d5db; border-radius:10px; background:#fff; color:#374151;
-      font-size:14px; cursor:pointer;
-    }
-    .radio-card.active { border-color:#693BF2; background:#f7f3ff; color:#5b45c5; }
-    .radio-dot {
-      width:16px; height:16px; border-radius:50%; border:2px solid #c4c9d4; position:relative; flex-shrink:0;
-    }
-    .radio-card.active .radio-dot { border-color:#693BF2; }
-    .radio-card.active .radio-dot::after {
-      content:''; position:absolute; top:50%; left:50%; width:8px; height:8px; border-radius:50%;
-      background:#693BF2; transform:translate(-50%, -50%);
-    }
-    .date-range { display:flex; align-items:center; gap:7px; }
-    .date-range input { width:130px; }
-    .date-sep { color:#bbb; font-size:13px; }
-    .btn-group, .tbl-actions, .action-row, .tab-row, .pill-row { display:flex; gap:8px; flex-wrap:wrap; }
-    .btn, .btn-primary, .btn-secondary, .btn-tertiary, .btn-back, .btn-save, .btn-chip, .sort-handle {
-      height:36px; padding:0 16px; border-radius:7px; font-size:13px; cursor:pointer; border:none;
-    }
-    .btn { padding:0 18px; }
-    .btn-reset, .btn-secondary, .btn-tertiary, .btn-back { background:#fff; border:1px solid #d1d5db; color:#555; }
-    .btn-search, .btn-primary, .btn-save { background:#693BF2; color:#fff; font-weight:700; }
-    .btn-chip { height:32px; padding:0 14px; border-radius:999px; background:#fff; border:1px solid #d1d5db; color:#4b5563; font-size:12px; font-weight:600; }
-    .btn-chip.active { background:#f0ebff; color:#693BF2; border-color:#d4c8fc; }
+    .btn-group, .tbl-actions { display:flex; gap:8px; flex-wrap:wrap; }
+    .btn, .btn-primary, .btn-reset, .btn-back, .btn-save { height:36px; padding:0 16px; border-radius:7px; font-size:13px; cursor:pointer; border:none; }
+    .btn-reset, .btn-back { background:#fff; border:1px solid #d1d5db; color:#555; }
+    .btn-primary, .btn-save { background:#693BF2; color:#fff; font-weight:700; }
     .tbl-ctrl { display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; gap:12px; flex-wrap:wrap; }
     .result-count { font-size:14px; color:#555; }
     .result-count strong { color:#693BF2; font-weight:700; }
-    .info-banner { background:#f8f6ff; border:1px solid #e4dcff; color:#5b45c5; font-size:12px; line-height:1.55; padding:12px 14px; border-radius:9px; margin-bottom:16px; }
     .tbl-wrap { background:#fff; border:1px solid #e2e8f0; border-radius:10px; overflow:hidden; }
     .pg-row { display:flex; justify-content:flex-end; align-items:center; gap:8px; padding:10px 16px; border-bottom:1px solid #f0f0f0; font-size:13px; color:#666; }
     .pg-row.bottom { border-top:1px solid #f0f0f0; border-bottom:none; }
@@ -145,10 +61,8 @@
     thead tr { background:#f8f9fa; }
     thead th { padding:11px 14px; font-size:12.5px; font-weight:700; color:#555; border-bottom:1px solid #e2e8f0; text-align:left; white-space:nowrap; }
     tbody tr { border-bottom:1px solid #f0f0f0; }
-    tbody tr:last-child { border-bottom:none; }
-    tbody tr:hover { background:#fafafa; }
     tbody td { padding:12px 14px; font-size:13px; color:#333; vertical-align:middle; }
-    .status { display:inline-flex; align-items:center; gap:5px; font-size:12px; font-weight:600; padding:3px 10px; border-radius:20px; white-space:nowrap; }
+    .status { display:inline-flex; align-items:center; gap:5px; font-size:12px; font-weight:600; padding:3px 10px; border-radius:20px; }
     .s-wait { background:#f3f4f6; color:#6b7280; }
     .s-on { background:#ecfdf5; color:#059669; }
     .s-end { background:#f9fafb; color:#9ca3af; border:1px solid #e5e7eb; }
@@ -156,21 +70,13 @@
     .d-wait { background:#9ca3af; }
     .d-on { background:#10b981; }
     .d-end { background:#d1d5db; }
-    .label-pill { display:inline-flex; align-items:center; height:26px; padding:0 10px; border-radius:999px; font-size:12px; font-weight:700; }
-    .label-required { background:#fff1f2; color:#e11d48; }
-    .label-guide { background:#eff6ff; color:#2563eb; }
-    .label-knowhow { background:#ecfdf5; color:#059669; }
-    .note-warning {
-      display:inline-flex; align-items:center; min-height:26px; padding:4px 10px;
-      border-radius:999px; background:#fef2f2; border:1px solid #fecaca; color:#dc2626;
-      font-size:12px; font-weight:700;
-    }
+    .note-warning { display:inline-flex; align-items:center; min-height:26px; padding:4px 10px; border-radius:999px; background:#fef2f2; border:1px solid #fecaca; color:#dc2626; font-size:12px; font-weight:700; }
     .tgl-wrap { display:flex; align-items:center; gap:8px; }
-    .tgl { position:relative; width:40px; height:22px; cursor:pointer; display:inline-block; flex-shrink:0; }
+    .tgl { position:relative; width:40px; height:22px; display:inline-block; }
     .tgl input { opacity:0; width:0; height:0; position:absolute; }
-    .tgl-track { position:absolute; inset:0; border-radius:11px; background:#d1d5db; transition:background 0.2s; }
+    .tgl-track { position:absolute; inset:0; border-radius:11px; background:#d1d5db; }
     .tgl input:checked + .tgl-track { background:#693BF2; }
-    .tgl-thumb { position:absolute; top:2px; left:2px; width:18px; height:18px; background:#fff; border-radius:50%; transition:transform 0.2s; box-shadow:0 1px 3px rgba(0,0,0,0.2); pointer-events:none; }
+    .tgl-thumb { position:absolute; top:2px; left:2px; width:18px; height:18px; background:#fff; border-radius:50%; transition:transform 0.2s; }
     .tgl input:checked ~ .tgl-thumb { transform:translateX(18px); }
     .tgl-on { font-size:12px; font-weight:700; color:#693BF2; }
     .tgl-off { font-size:12px; color:#9ca3af; }
@@ -178,109 +84,57 @@
     .act-edit { color:#693BF2; background:#fff; border:1px solid #693BF2; cursor:pointer; }
     .act-disabled { color:#d1d5db; background:#f9fafb; border:1px solid #e5e7eb; cursor:not-allowed; }
     .tip-wrap { position:relative; display:inline-block; }
+    .tip { opacity:0; position:absolute; bottom:calc(100% + 7px); left:50%; transform:translateX(-50%); background:#374151; color:#fff; font-size:11px; padding:5px 10px; border-radius:6px; white-space:nowrap; z-index:20; }
     .tip-wrap:hover .tip { opacity:1; }
-    .tip { opacity:0; position:absolute; bottom:calc(100% + 7px); left:50%; transform:translateX(-50%); background:#374151; color:#fff; font-size:11px; padding:5px 10px; border-radius:6px; white-space:nowrap; z-index:20; transition:opacity 0.15s; pointer-events:none; }
-    .tip::after { content:''; position:absolute; top:100%; left:50%; transform:translateX(-50%); border:5px solid transparent; border-top-color:#374151; }
     .form-shell { display:grid; grid-template-columns:minmax(0, 780px) 320px; gap:20px; align-items:start; }
     .form-card { padding:28px 32px; }
     .form-card + .form-card { margin-top:16px; }
     .form-card-title { font-size:15px; font-weight:700; color:#1a202c; padding-bottom:14px; border-bottom:1px solid #f0f0f0; margin-bottom:24px; }
     .ff-grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
-    .ff-grid .full { grid-column:1 / -1; }
     .ff { margin-bottom:22px; }
     .ff:last-child { margin-bottom:0; }
     .ff label { display:block; font-size:13px; font-weight:700; color:#333; margin-bottom:7px; }
     .hint { font-size:11.5px; color:#9ca3af; margin-top:6px; line-height:1.5; white-space:pre-line; }
     .req { color:#693BF2; }
-    .choice-row { display:flex; gap:12px; flex-wrap:wrap; }
-    .choice { display:inline-flex; align-items:center; gap:8px; padding:10px 12px; border:1px solid #d1d5db; border-radius:8px; min-height:40px; font-size:13px; color:#374151; background:#fff; }
-    .choice.active { border-color:#693BF2; background:#f7f3ff; color:#5b45c5; }
-    .preview-card, .stack-card, .sort-card { padding:18px; }
-    .stack-card + .stack-card, .preview-card + .stack-card { margin-top:16px; }
-    .summary-title { font-size:14px; font-weight:700; color:#1f2937; margin-bottom:12px; }
-    .summary-list { display:grid; gap:10px; }
-    .summary-item { padding:12px; border:1px solid #ebeef3; border-radius:8px; background:#fafbfc; }
-    .summary-item strong { display:block; font-size:12px; color:#6b7280; margin-bottom:4px; }
-    .summary-item span { font-size:13px; color:#111827; line-height:1.45; }
-    .mini-badge { display:inline-block; font-size:11px; font-weight:700; color:#693BF2; background:#f0ebff; border:1px solid #d4c8fc; border-radius:999px; padding:4px 9px; margin-bottom:10px; }
-    .guide-preview { border:1px solid #ebeef3; border-radius:12px; background:linear-gradient(180deg, #fff 0%, #f8f9ff 100%); overflow:hidden; }
-    .guide-preview-head { padding:16px 18px; border-bottom:1px solid #eef2f7; }
-    .guide-preview-body { padding:16px 18px; display:grid; gap:10px; }
-    .guide-row { border:1px solid #eef2f7; border-radius:10px; padding:12px; background:#fff; }
-    .guide-row strong { display:block; font-size:13px; color:#111827; margin-top:6px; }
-    .guide-row span { font-size:12px; color:#6b7280; }
-    .rule-list { display:grid; gap:8px; margin-top:10px; }
-    .rule-list div { font-size:12px; color:#4b5563; line-height:1.55; padding-left:14px; position:relative; }
-    .rule-list div::before { content:'•'; position:absolute; left:0; color:#693BF2; }
+    .radio-card-row { display:flex; gap:12px; flex-wrap:wrap; margin-bottom:18px; }
+    .radio-card { display:flex; align-items:center; gap:10px; min-height:44px; padding:0 14px; border:1px solid #d1d5db; border-radius:10px; background:#fff; color:#374151; font-size:14px; cursor:pointer; }
+    .radio-card.active { border-color:#693BF2; background:#f7f3ff; color:#5b45c5; }
+    .radio-dot { width:16px; height:16px; border-radius:50%; border:2px solid #c4c9d4; position:relative; }
+    .radio-card.active .radio-dot { border-color:#693BF2; }
+    .radio-card.active .radio-dot::after { content:''; position:absolute; top:50%; left:50%; width:8px; height:8px; border-radius:50%; background:#693BF2; transform:translate(-50%, -50%); }
     .form-footer { display:flex; justify-content:space-between; align-items:center; max-width:780px; margin-top:20px; gap:12px; }
-    .sort-card ul { list-style:none; display:grid; gap:10px; }
-    .sort-item { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:14px; border:1px solid #e5e7eb; border-radius:10px; background:#fafbfc; }
-    .sort-meta strong { display:block; font-size:13px; color:#111827; margin-bottom:4px; }
-    .sort-meta span { font-size:12px; color:#6b7280; }
-    .sort-handle { width:38px; min-width:38px; padding:0; background:#fff; border:1px solid #d1d5db; color:#6b7280; font-weight:700; }
-    .service-trigger {
-      width:100%; height:40px; display:flex; align-items:center; justify-content:center;
-      padding:0 14px; border:1px solid #d1d5db; border-radius:8px; background:#fff;
-      color:#4b5563; font-size:14px; font-weight:600; cursor:pointer;
+    .service-trigger, .area-add-btn {
+      width:100%; height:40px; display:flex; align-items:center; justify-content:center; padding:0 14px;
+      border:1px solid #d1d5db; border-radius:8px; background:#fff; color:#4b5563; font-size:14px; font-weight:600; cursor:pointer;
     }
-    .service-trigger:hover { border-color:#693BF2; color:#693BF2; }
+    .service-trigger:hover, .area-add-btn:hover { border-color:#693BF2; color:#693BF2; }
     .selected-service-stack { display:grid; gap:8px; margin-top:10px; }
     .selected-service-card {
-      display:flex; align-items:center; justify-content:space-between; gap:12px;
-      min-height:40px; padding:10px 12px; border:1px solid #e5e7eb; border-radius:10px;
-      background:#f8fafc; color:#111827; font-size:14px; font-weight:600;
+      display:flex; align-items:center; justify-content:space-between; gap:12px; min-height:40px;
+      padding:10px 12px; border:1px solid #e5e7eb; border-radius:10px; background:#f8fafc; color:#111827; font-size:14px; font-weight:600;
     }
     .selected-service-remove {
-      width:22px; height:22px; border:none; border-radius:50%; background:#cbd5e1; color:#fff;
-      font-size:14px; line-height:1; cursor:pointer; flex-shrink:0;
+      width:22px; height:22px; border:none; border-radius:50%; background:#cbd5e1; color:#fff; font-size:14px; line-height:1; cursor:pointer; flex-shrink:0;
     }
-    .selected-service-empty {
-      margin-top:10px; font-size:12px; color:#94a3b8; line-height:1.5;
-    }
+    .selected-service-empty { margin-top:10px; font-size:12px; color:#94a3b8; line-height:1.5; }
     .area-select-wrap { display:grid; gap:10px; }
-    .area-add-btn {
-      width:100%; height:40px; border:1px solid #d1d5db; border-radius:8px; background:#fff;
-      color:#4b5563; font-size:14px; font-weight:600; cursor:pointer;
-    }
-    .area-add-btn:hover { border-color:#693BF2; color:#693BF2; }
     .service-modal {
-      position:fixed; inset:0; z-index:300; display:flex; align-items:center; justify-content:center;
-      padding:24px; background:rgba(15,23,42,0.28);
+      position:fixed; inset:0; z-index:300; display:flex; align-items:center; justify-content:center; padding:24px; background:rgba(15,23,42,0.28);
     }
     .service-modal-panel {
-      width:min(980px, calc(100vw - 48px)); height:min(760px, calc(100vh - 48px));
-      background:#fff; border-radius:20px; box-shadow:0 24px 80px rgba(15,23,42,0.22);
+      width:min(980px, calc(100vw - 48px)); height:min(760px, calc(100vh - 48px)); background:#fff; border-radius:20px; box-shadow:0 24px 80px rgba(15,23,42,0.22);
       display:flex; flex-direction:column; overflow:hidden;
     }
-    .service-modal-head {
-      display:flex; align-items:center; justify-content:space-between; padding:22px 10px 18px 24px;
-      border-bottom:1px solid #eef2f7;
-    }
+    .service-modal-head { display:flex; align-items:center; justify-content:space-between; padding:22px 10px 18px 24px; border-bottom:1px solid #eef2f7; }
     .service-modal-title { font-size:18px; font-weight:800; color:#111827; }
-    .service-modal-close {
-      width:40px; height:40px; border:none; background:none; border-radius:10px; cursor:pointer;
-      font-size:28px; line-height:1; color:#111827;
-    }
+    .service-modal-close { width:40px; height:40px; border:none; background:none; border-radius:10px; cursor:pointer; font-size:28px; line-height:1; color:#111827; }
     .service-modal-body { flex:1; display:grid; grid-template-columns:minmax(0, 1fr) 286px; min-height:0; }
     .service-modal-main { min-width:0; display:flex; flex-direction:column; border-right:1px solid #eef2f7; }
-    .service-search {
-      padding:14px 16px 12px; border-bottom:1px solid #f3f4f6;
-    }
-    .service-search-box {
-      height:44px; border-radius:12px; background:#f1f5f9; display:flex; align-items:center; gap:10px;
-      padding:0 14px; color:#94a3b8; font-size:15px;
-    }
-    .service-search-box input {
-      flex:1; height:100%; border:none; outline:none; background:transparent; color:#334155; font-size:15px;
-    }
-    .service-top-cats {
-      display:grid; grid-template-columns:repeat(8, minmax(0, 1fr)); gap:16px; padding:18px 16px 14px;
-      border-bottom:1px solid #eef2f7;
-    }
-    .service-top-cat {
-      display:grid; justify-items:center; gap:10px; cursor:pointer; color:#64748b;
-      border:none; background:none; padding:0;
-    }
+    .service-search { padding:14px 16px 12px; border-bottom:1px solid #f3f4f6; }
+    .service-search-box { height:44px; border-radius:12px; background:#f1f5f9; display:flex; align-items:center; gap:10px; padding:0 14px; color:#94a3b8; font-size:15px; }
+    .service-search-box input { flex:1; height:100%; border:none; outline:none; background:transparent; color:#334155; font-size:15px; }
+    .service-top-cats { display:grid; grid-template-columns:repeat(8, minmax(0, 1fr)); gap:16px; padding:18px 16px 14px; border-bottom:1px solid #eef2f7; }
+    .service-top-cat { display:grid; justify-items:center; gap:10px; cursor:pointer; color:#64748b; border:none; background:none; padding:0; }
     .service-top-cat-icon {
       position:relative; width:58px; height:58px; border-radius:14px; border:1px solid #e2e8f0; background:#fff;
       display:flex; align-items:center; justify-content:center; font-size:30px; box-shadow:0 4px 14px rgba(15,23,42,0.05);
@@ -288,79 +142,40 @@
     .service-top-cat-label { font-size:14px; font-weight:700; white-space:nowrap; }
     .service-top-cat.active { color:#111827; }
     .service-top-cat.active .service-top-cat-icon { border-color:#111827; }
-    .service-level-toggle {
-      width:20px; height:20px; border-radius:6px; border:2px solid #cbd5e1; background:#fff; cursor:pointer; flex-shrink:0;
-    }
-    .service-level-toggle.checked {
-      border-color:#693BF2; background:#693BF2; box-shadow:inset 0 0 0 3px #fff;
-    }
-    .service-radio-toggle { border-radius:50%; }
-    .service-radio-toggle.checked { box-shadow:inset 0 0 0 4px #fff; }
-    .service-top-cat-toggle {
-      position:absolute; right:-5px; top:-5px; width:20px; height:20px;
-    }
-    .service-picker {
-      flex:1; min-height:0; display:grid; grid-template-columns:152px minmax(0, 1fr);
-    }
-    .service-subcats {
-      background:#f8fafc; border-right:1px solid #eef2f7; overflow:auto;
-    }
+    .service-level-toggle { width:20px; height:20px; border-radius:6px; border:2px solid #cbd5e1; background:#fff; cursor:pointer; flex-shrink:0; }
+    .service-level-toggle.checked { border-color:#693BF2; background:#693BF2; box-shadow:inset 0 0 0 3px #fff; }
+    .service-top-cat-toggle { position:absolute; right:-5px; top:-5px; width:20px; height:20px; }
+    .service-picker { flex:1; min-height:0; display:grid; grid-template-columns:152px minmax(0, 1fr); }
+    .service-subcats { background:#f8fafc; border-right:1px solid #eef2f7; overflow:auto; }
     .service-subcat {
       width:100%; display:flex; align-items:center; justify-content:space-between; gap:10px;
-      text-align:left; border:none; background:none; padding:16px 16px;
-      color:#94a3b8; font-size:15px; font-weight:700; cursor:pointer;
+      text-align:left; border:none; background:none; padding:16px 16px; color:#94a3b8; font-size:15px; font-weight:700; cursor:pointer;
     }
     .service-subcat.active { background:#eef2f7; color:#111827; }
     .service-list-shell { display:flex; flex-direction:column; min-width:0; }
-    .service-list-head {
-      display:grid; grid-template-columns:minmax(0, 1fr) minmax(0, 1fr); gap:18px;
-      padding:18px 16px 8px; color:#111827; font-size:16px; font-weight:800;
-    }
-    .service-list {
-      flex:1; overflow:auto; padding:0 0 8px;
-    }
-    .service-row {
-      display:grid; grid-template-columns:minmax(0, 1fr) 32px; gap:16px; align-items:center;
-      padding:18px 16px; border-top:1px solid #f8fafc;
-    }
+    .service-list-head { display:grid; grid-template-columns:minmax(0, 1fr) minmax(0, 1fr); gap:18px; padding:18px 16px 8px; color:#111827; font-size:16px; font-weight:800; }
+    .service-list { flex:1; overflow:auto; padding:0 0 8px; }
+    .service-row { display:grid; grid-template-columns:minmax(0, 1fr) 32px; gap:16px; align-items:center; padding:18px 16px; border-top:1px solid #f8fafc; }
     .service-row span { font-size:16px; color:#111827; line-height:1.4; }
-    .service-check {
-      width:22px; height:22px; border-radius:6px; border:2px solid #cbd5e1; background:#fff; cursor:pointer;
-    }
-    .service-check.checked {
-      border-color:#693BF2; background:#693BF2; box-shadow:inset 0 0 0 4px #fff;
-    }
-    .service-modal-side {
-      display:flex; flex-direction:column; min-width:0; background:#fff;
-    }
-    .service-selected-head {
-      display:flex; align-items:center; justify-content:space-between; padding:18px 14px 14px 16px;
-      color:#111827; font-size:15px; font-weight:800;
-    }
-    .service-selected-list {
-      flex:1; overflow:auto; padding:0 8px 16px 16px;
-    }
-    .service-selected-item {
-      display:flex; align-items:center; justify-content:space-between; gap:12px; padding:14px 0;
-      border-bottom:1px solid #f8fafc;
-    }
-    .service-selected-item span { font-size:16px; color:#111827; }
-    .service-remove {
-      width:22px; height:22px; border:none; border-radius:50%; background:#cbd5e1; color:#fff;
-      font-size:14px; cursor:pointer;
-    }
-    .service-modal-footer {
-      padding:14px 14px 14px 16px; border-top:1px solid #eef2f7; display:flex; justify-content:flex-end;
-    }
+    .service-row-copy { display:grid; gap:4px; }
+    .service-row-meta { font-size:12px; color:#94a3b8; line-height:1.4; }
+    .service-check { width:22px; height:22px; border-radius:6px; border:2px solid #cbd5e1; background:#fff; cursor:pointer; }
+    .service-check.checked { border-color:#693BF2; background:#693BF2; box-shadow:inset 0 0 0 4px #fff; }
+    .service-modal-side { display:flex; flex-direction:column; min-width:0; background:#fff; }
+    .service-selected-head { display:flex; align-items:center; justify-content:space-between; padding:18px 14px 14px 16px; color:#111827; font-size:15px; font-weight:800; }
+    .service-selected-list { flex:1; overflow:auto; padding:0 8px 16px 16px; }
+    .service-selected-item { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:14px 0; border-bottom:1px solid #f8fafc; }
+    .service-remove { width:22px; height:22px; border:none; border-radius:50%; background:#cbd5e1; color:#fff; font-size:14px; cursor:pointer; }
+    .service-modal-footer { padding:14px 14px 14px 16px; border-top:1px solid #eef2f7; display:flex; justify-content:flex-end; gap:10px; }
     .service-submit {
-      width:150px; height:48px; border:none; border-radius:12px; background:#cbd5e1;
-      color:#fff; font-size:20px; font-weight:800; cursor:not-allowed;
+      width:150px; height:48px; border:none; border-radius:12px; background:#cbd5e1; color:#fff; font-size:20px; font-weight:800; cursor:not-allowed;
     }
     .service-submit.active { background:#693BF2; cursor:pointer; }
+    .service-submit-secondary { background:#fff; color:#693BF2; border:1px solid #d4c8fc; cursor:pointer; }
+    .service-submit-secondary.disabled { opacity:0.45; cursor:not-allowed; }
     @media (max-width: 1180px) {
       .form-shell { grid-template-columns:1fr; }
       .form-footer { max-width:none; }
-      .metric-grid { grid-template-columns:1fr; }
     }
     @media (max-width: 860px) {
       body { display:block; }
@@ -422,151 +237,99 @@
 
   <script>
     const benefitRows = [
-      { no: 38, code: 'BENEFIT-240401-01', name: '이사/청소 서울 강남 재진입 부스팅', type: 'Payback', quoteType: '스마트견적', service: '국내 이사 외 1개', start: '2026-04-03 09:00', end: '2026-04-17 23:59', status: '진행 중', active: true, updated: '2026-04-02 10:42', editor: 'Shayne Kim', note: '', editable: false },
-      { no: 37, code: 'BENEFIT-240328-02', name: '가전설치 신규 고수 초기 견적 유도', type: '캐시 지급', quoteType: '일반견적', service: '가전설치', start: '2026-04-05 00:00', end: '2026-04-30 23:59', status: '대기', active: true, updated: '2026-04-01 18:05', editor: 'Shayne Kim', note: '개발 문의 필요', editable: true },
-      { no: 36, code: 'BENEFIT-240320-03', name: '도배/장판 지방권 응답 회복', type: '수수료 할인', quoteType: '일반견적', service: '도배장판 시공', start: '2026-03-20 00:00', end: '2026-03-31 23:59', status: '종료', active: false, updated: '2026-03-31 09:48', editor: 'Shayne Kim', note: '', editable: true },
-      { no: 35, code: 'BENEFIT-240315-07', name: '웨딩 본식 촬영 고수 확보 캠페인', type: 'Payback', quoteType: '스마트견적', service: '웨딩스냅 촬영', start: '2026-04-08 10:00', end: '2026-05-08 23:59', status: '대기', active: false, updated: '2026-03-30 11:12', editor: 'Shayne Kim', note: '', editable: true }
+      { no: 38, name: '이사/청소 서울 강남 재진입 부스팅', quoteType: '스마트견적', service: '국내 이사 외 1개', start: '2026-04-03 09:00', end: '2026-04-17 23:59', status: '진행 중', active: true, updated: '2026-04-02 10:42', editor: 'Shayne Kim', note: '', editable: false },
+      { no: 37, name: '가전설치 신규 고수 초기 견적 유도', quoteType: '일반견적', service: '가전설치', start: '2026-04-05 00:00', end: '2026-04-30 23:59', status: '대기', active: true, updated: '2026-04-01 18:05', editor: 'Shayne Kim', note: '개발 문의 필요', editable: true },
+      { no: 36, name: '도배/장판 지방권 응답 회복', quoteType: '일반견적', service: '도배장판 시공', start: '2026-03-20 00:00', end: '2026-03-31 23:59', status: '종료', active: false, updated: '2026-03-31 09:48', editor: 'Shayne Kim', note: '', editable: true },
+      { no: 35, name: '웨딩 본식 촬영 고수 확보 캠페인', quoteType: '스마트견적', service: '웨딩스냅 촬영', start: '2026-04-08 10:00', end: '2026-05-08 23:59', status: '대기', active: false, updated: '2026-03-30 11:12', editor: 'Shayne Kim', note: '', editable: true }
     ];
+
     const regionOptions = {
-      '서울특별시': {
-        '강남구': ['역삼동', '논현동', '삼성동'],
-        '서초구': ['서초동', '방배동', '잠원동'],
-        '송파구': ['잠실동', '문정동', '가락동']
-      },
-      '부산광역시': {
-        '해운대구': ['우동', '중동', '좌동'],
-        '수영구': ['광안동', '남천동', '민락동'],
-        '동래구': ['온천동', '명륜동', '사직동']
-      },
-      '대구광역시': {
-        '수성구': ['범어동', '만촌동', '황금동'],
-        '중구': ['동성로', '삼덕동', '남산동'],
-        '달서구': ['상인동', '죽전동', '이곡동']
-      }
+      '서울특별시': { '강남구': ['역삼동', '논현동', '삼성동'], '서초구': ['서초동', '방배동', '잠원동'], '송파구': ['잠실동', '문정동', '가락동'] },
+      '부산광역시': { '해운대구': ['우동', '중동', '좌동'], '수영구': ['광안동', '남천동', '민락동'], '동래구': ['온천동', '명륜동', '사직동'] },
+      '대구광역시': { '수성구': ['범어동', '만촌동', '황금동'], '중구': ['동성로', '삼덕동', '남산동'], '달서구': ['상인동', '죽전동', '이곡동'] }
     };
+
     const serviceModalCategories = [
-      {
-        id: 'move-clean',
-        icon: '🚚',
-        label: '이사/청소',
-        groups: [
-          { id: 'move', label: '이사', services: ['가정이사(투룸 이상)', '국내 이사', '무진동차량/냉동차량/냉장차량', '사무실/상업공간 이사', '용달/화물 운송', '원룸/소형 이사', '상조 가전결합 상품'] },
-          { id: 'move-clean-home', label: '입주/집 청소', services: ['입주 청소', '거주 청소', '이사 청소'] },
-          { id: 'home-clean', label: '가전/가구 청소', services: ['에어컨 청소', '세탁기 청소', '매트리스 청소'] },
-          { id: 'biz-clean', label: '사업장 청소', services: ['사무실 청소', '상가 청소', '정기 청소'] },
-          { id: 'special-clean', label: '특수 청소', services: ['화재 청소', '침수 청소', '폐기물 정리'] },
-          { id: 'removal', label: '철거/폐기', services: ['가구 철거', '주방 철거', '생활 폐기물 수거'] }
-        ]
-      },
-      {
-        id: 'install',
-        icon: '🔧',
-        label: '설치/수리',
-        groups: [
-          { id: 'appliance-install', label: '가전 설치', services: ['에어컨 설치', 'TV 벽걸이 설치', '세탁기 설치', '건조기 설치'] },
-          { id: 'smart-device', label: '스마트기기 설치', services: ['CCTV 설치', '도어락 설치', '인터폰 교체'] },
-          { id: 'repair', label: '생활 수리', services: ['문 수리', '수도 수리', '전기 수리', '방충망 수리'] }
-        ]
-      },
-      {
-        id: 'interior',
-        icon: '🛋️',
-        label: '인테리어',
-        groups: [
-          { id: 'wall', label: '도배/장판', services: ['도배 시공', '장판 시공', '벽지 부분 보수'] },
-          { id: 'space-style', label: '공간 스타일링', services: ['홈스타일링', '상업공간 스타일링', '가구 배치 컨설팅'] },
-          { id: 'construction', label: '부분 시공', services: ['욕실 리모델링', '주방 리모델링', '중문 설치'] }
-        ]
-      },
-      {
-        id: 'outsourcing',
-        icon: '💼',
-        label: '외주',
-        groups: [
-          { id: 'design', label: '디자인', services: ['상세페이지 제작', '배너 디자인', '브랜드 키비주얼 제작'] },
-          { id: 'content', label: '콘텐츠 제작', services: ['블로그 원고 작성', 'SNS 콘텐츠 제작', '영상 자막 작업'] },
-          { id: 'dev', label: '개발', services: ['랜딩페이지 제작', '노코드 자동화 구축', '웹 유지보수'] }
-        ]
-      },
-      {
-        id: 'event-beauty',
-        icon: '🎀',
-        label: '이벤트/뷰티',
-        groups: [
-          { id: 'wedding', label: '웨딩', services: ['웨딩 메이크업', '웨딩 촬영', '본식 헤어 스타일링'] },
-          { id: 'party', label: '행사', services: ['행사 사회자 섭외', '포토부스 대여', '출장 데코레이션'] },
-          { id: 'beauty', label: '뷰티', services: ['퍼스널 메이크업', '출장 네일', '프로필 헤어메이크업'] }
-        ]
-      },
-      {
-        id: 'job',
-        icon: '🪪',
-        label: '취업/직무',
-        groups: [
-          { id: 'career', label: '커리어', services: ['이력서 첨삭', '면접 코칭', '자기소개서 첨삭'] },
-          { id: 'office-skill', label: '직무 스킬', services: ['엑셀 과외', 'PPT 코칭', '데이터 분석 입문'] },
-          { id: 'cert', label: '자격증', services: ['컴활 대비', '토익스피킹 대비', '면접 스터디 코칭'] }
-        ]
-      },
-      {
-        id: 'lesson',
-        icon: '🎓',
-        label: '과외',
-        groups: [
-          { id: 'language', label: '언어 과외', services: ['영어 과외', '일본어 과외', '중국어 과외'] },
-          { id: 'school', label: '학교 과외', services: ['수학 과외', '국어 과외', '과학 과외', '사회 과외'] },
-          { id: 'exam', label: '시험 대비', services: ['수능 영어 대비', '토플 과외', '아이엘츠 과외'] }
-        ]
-      },
-      {
-        id: 'hobby',
-        icon: '🏀',
-        label: '취미/자기계발',
-        groups: [
-          { id: 'sports', label: '스포츠', services: ['농구 레슨', '테니스 레슨', '수영 레슨'] },
-          { id: 'music', label: '음악', services: ['보컬 레슨', '기타 레슨', '피아노 레슨'] },
-          { id: 'life', label: '자기계발', services: ['발표 코칭', '습관 코칭', '퍼스널 브랜딩'] }
-        ]
-      }
+      { id:'move-clean', icon:'🚚', label:'이사/청소', groups:[
+        { id:'move', label:'이사', services:['가정이사(투룸 이상)','국내 이사','무진동차량/냉동차량/냉장차량','사무실/상업공간 이사','용달/화물 운송','원룸/소형 이사','상조 가전결합 상품'] },
+        { id:'move-clean-home', label:'입주/집 청소', services:['입주 청소','거주 청소','이사 청소'] },
+        { id:'home-clean', label:'가전/가구 청소', services:['에어컨 청소','세탁기 청소','매트리스 청소'] }
+      ]},
+      { id:'install', icon:'🔧', label:'설치/수리', groups:[
+        { id:'appliance-install', label:'가전 설치', services:['에어컨 설치','TV 벽걸이 설치','세탁기 설치','건조기 설치'] },
+        { id:'smart-device', label:'스마트기기 설치', services:['CCTV 설치','도어락 설치','인터폰 교체'] },
+        { id:'repair', label:'생활 수리', services:['문 수리','수도 수리','전기 수리','방충망 수리'] }
+      ]},
+      { id:'interior', icon:'🛋️', label:'인테리어', groups:[
+        { id:'wall', label:'도배/장판', services:['도배 시공','장판 시공','벽지 부분 보수'] },
+        { id:'space-style', label:'공간 스타일링', services:['홈스타일링','상업공간 스타일링','가구 배치 컨설팅'] }
+      ]},
+      { id:'outsourcing', icon:'💼', label:'외주', groups:[
+        { id:'design', label:'디자인', services:['상세페이지 제작','배너 디자인','브랜드 키비주얼 제작'] },
+        { id:'content', label:'콘텐츠 제작', services:['블로그 원고 작성','SNS 콘텐츠 제작','영상 자막 작업'] }
+      ]},
+      { id:'event-beauty', icon:'🎀', label:'이벤트/뷰티', groups:[
+        { id:'wedding', label:'웨딩', services:['웨딩 메이크업','웨딩 촬영','본식 헤어 스타일링'] },
+        { id:'beauty', label:'뷰티', services:['퍼스널 메이크업','출장 네일','프로필 헤어메이크업'] }
+      ]},
+      { id:'job', icon:'🪪', label:'취업/직무', groups:[
+        { id:'career', label:'커리어', services:['이력서 첨삭','면접 코칭','자기소개서 첨삭'] },
+        { id:'office-skill', label:'직무 스킬', services:['엑셀 과외','PPT 코칭','데이터 분석 입문'] }
+      ]},
+      { id:'lesson', icon:'🎓', label:'과외', groups:[
+        { id:'language', label:'언어 과외', services:['영어 과외','일본어 과외','중국어 과외'] },
+        { id:'school', label:'학교 과외', services:['수학 과외','국어 과외','과학 과외','사회 과외'] },
+        { id:'exam', label:'시험 대비', services:['수능 영어 대비','토플 과외','아이엘츠 과외'] }
+      ]},
+      { id:'hobby', icon:'🏀', label:'취미/자기계발', groups:[
+        { id:'sports', label:'스포츠', services:['농구 레슨','테니스 레슨','수영 레슨'] },
+        { id:'music', label:'음악', services:['보컬 레슨','기타 레슨','피아노 레슨'] }
+      ]}
     ];
+
+    let benefitConditionMode = 'csv';
+    let currentBenefitRegisterIsEdit = false;
+    let serviceModalOpen = false;
+    let selectedRegionCity = '전체';
+    let selectedRegionDistrict = '전체';
+    let selectedRegionDong = '전체';
+    let appliedRegionItems = ['전체'];
+    let activeServiceCategoryId = 'move-clean';
+    let activeServiceGroupId = 'move';
+    let isServiceSearchComposing = false;
+    let serviceSearchQuery = '';
+    let draftServiceItem = null;
+    let selectedServiceItems = [{ key:'service:영어 과외', label:'영어 과외', level:'service' }];
+    let appliedServiceItems = [{ key:'service:영어 과외', label:'영어 과외', level:'service' }];
 
     function setActiveMenu(key) {
       document.querySelectorAll('.menu-sub .menu-item').forEach((el) => {
         el.classList.toggle('active-sub', el.dataset.menu === key);
       });
     }
-
+    function stopEventPropagation(event) { event.stopPropagation(); }
     function render(html, keepScroll = false) {
       const currentScrollY = window.scrollY;
       document.getElementById('main-area').innerHTML = html;
-      window.scrollTo({ top: keepScroll ? currentScrollY : 0, behavior: 'auto' });
+      window.scrollTo({ top: keepScroll ? currentScrollY : 0, behavior:'auto' });
+      if (serviceModalOpen) {
+        requestAnimationFrame(() => {
+          const searchInput = document.querySelector('[data-service-search-input]');
+          if (!searchInput) return;
+          searchInput.focus();
+          const valueLength = searchInput.value.length;
+          searchInput.setSelectionRange(valueLength, valueLength);
+        });
+      }
     }
-
     function statusTag(status) {
       if (status === '진행 중') return '<span class="status s-on"><span class="dot d-on"></span>진행 중</span>';
       if (status === '종료') return '<span class="status s-end"><span class="dot d-end"></span>종료</span>';
       return '<span class="status s-wait"><span class="dot d-wait"></span>대기</span>';
     }
-
-    function typeTag(type) {
-      if (type === 'Payback') return '<span class="label-pill label-guide">Payback</span>';
-      if (type === '캐시 지급') return '<span class="label-pill label-required">캐시 지급</span>';
-      return '<span class="label-pill label-knowhow">수수료 할인</span>';
-    }
-
     function toggleTag(active) {
-      return `
-        <div class="tgl-wrap">
-          <label class="tgl">
-            <input type="checkbox" ${active ? 'checked' : ''}>
-            <div class="tgl-track"></div>
-            <div class="tgl-thumb"></div>
-          </label>
-          <span class="${active ? 'tgl-on' : 'tgl-off'}">${active ? 'On' : 'Off'}</span>
-        </div>
-      `;
+      return `<div class="tgl-wrap"><label class="tgl"><input type="checkbox" ${active ? 'checked' : ''}><div class="tgl-track"></div><div class="tgl-thumb"></div></label><span class="${active ? 'tgl-on' : 'tgl-off'}">${active ? 'On' : 'Off'}</span></div>`;
     }
-
     function benefitTableRows() {
       return benefitRows.map((row) => `
         <tr>
@@ -581,26 +344,14 @@
           <td>${row.updated}</td>
           <td>${row.editor}</td>
           <td>${row.note ? '<span class="note-warning">' + row.note + '</span>' : ''}</td>
-          <td style="text-align:center">
-            ${row.editable
-              ? '<button class="act-edit" onclick="showBenefitRegister(true)">수정</button>'
-              : '<div class="tip-wrap"><button class="act-disabled">수정</button><div class="tip">활성화 On 상태에서는 수정이 제한됩니다</div></div>'}
-          </td>
+          <td style="text-align:center">${row.editable ? '<button class="act-edit" onclick="showBenefitRegister(true)">수정</button>' : '<div class="tip-wrap"><button class="act-disabled">수정</button><div class="tip">활성화 On 상태에서는 수정이 제한됩니다</div></div>'}</td>
         </tr>
       `).join('');
     }
-
     function promotionView() {
       return `
-        <div class="breadcrumb">
-          <a onclick="showPromotionView()">포스 홈</a><span class="breadcrumb-sep">/</span>
-          프로모션 관리
-        </div>
-        <div class="subhead">
-          <div>
-            <h1>프로모션 관리</h1>
-          </div>
-        </div>
+        <div class="breadcrumb"><a onclick="showPromotionView()">포스 홈</a><span class="breadcrumb-sep">/</span>프로모션 관리</div>
+        <div class="subhead"><div><h1>프로모션 관리</h1></div></div>
         <div class="search-card">
           <div class="search-row">
             <div class="fg"><label>Benefit 이벤트명</label><input type="text" placeholder="이벤트명 검색" style="width:240px"></div>
@@ -610,219 +361,117 @@
             <div class="fg" style="min-width:350px;">
               <label>서비스</label>
               <div class="triple-select" style="width:350px;">
-                <select>
-                  <option selected>이사</option>
-                  <option>청소</option>
-                  <option>설치/수리</option>
-                </select>
-                <select>
-                  <option selected>가정이사</option>
-                  <option>원룸/소형이사</option>
-                  <option>사무실이사</option>
-                </select>
-                <select>
-                  <option selected>국내 이사</option>
-                  <option>가정이사(투룸 이상)</option>
-                  <option>원룸/소형 이사</option>
-                </select>
+                <select><option selected>이사</option><option>청소</option><option>설치/수리</option></select>
+                <select><option selected>가정이사</option><option>원룸/소형이사</option><option>사무실이사</option></select>
+                <select><option selected>국내 이사</option><option>가정이사(투룸 이상)</option><option>원룸/소형 이사</option></select>
               </div>
             </div>
           </div>
-          <div class="search-row">
-            <div class="btn-group"><button class="btn btn-reset">초기화</button><button class="btn btn-search">검색</button></div>
-          </div>
+          <div class="search-row"><div class="btn-group"><button class="btn btn-reset">초기화</button><button class="btn btn-primary">검색</button></div></div>
         </div>
-        <div class="tbl-ctrl">
-          <div class="result-count">총 <strong>38개</strong> Benefit 이벤트</div>
-          <div class="tbl-actions">
-            <button class="btn-primary" onclick="showBenefitRegister()">+ Benefit 등록</button>
-          </div>
-        </div>
+        <div class="tbl-ctrl"><div class="result-count">총 <strong>38개</strong> Benefit 이벤트</div><div class="tbl-actions"><button class="btn-primary" onclick="showBenefitRegister()">+ Benefit 등록</button></div></div>
         <div class="tbl-wrap">
           <div class="pg-row"><span>페이지당 크기</span><select><option>10</option><option>20</option><option>50</option></select><button class="pg-btn">‹</button><button class="pg-btn">›</button></div>
           <table>
-            <thead>
-              <tr>
-                <th style="width:56px">No.</th>
-                <th style="width:240px">Benefit 이벤트명</th>
-                <th style="width:120px">견적 종류</th>
-                <th style="width:180px">카테고리 및 서비스</th>
-                <th style="width:136px">시작일자</th>
-                <th style="width:136px">종료일자</th>
-                <th style="width:92px">상태</th>
-                <th style="width:108px">활성화</th>
-                <th style="width:132px">최근 수정일자</th>
-                <th style="width:104px">최근 등록자</th>
-                <th style="width:140px">비고</th>
-                <th style="width:80px; text-align:center">관리</th>
-              </tr>
-            </thead>
+            <thead><tr><th style="width:56px">No.</th><th style="width:240px">Benefit 이벤트명</th><th style="width:120px">견적 종류</th><th style="width:180px">카테고리 및 서비스</th><th style="width:136px">시작일자</th><th style="width:136px">종료일자</th><th style="width:92px">상태</th><th style="width:108px">활성화</th><th style="width:132px">최근 수정일자</th><th style="width:104px">최근 등록자</th><th style="width:140px">비고</th><th style="width:80px; text-align:center">관리</th></tr></thead>
             <tbody>${benefitTableRows()}</tbody>
           </table>
           <div class="pg-row bottom"><span>페이지당 크기</span><select><option>10</option><option>20</option><option>50</option></select><button class="pg-btn">‹</button><button class="pg-btn">›</button></div>
         </div>
       `;
     }
-
     function benefitDashboardView() {
       return `
-        <div class="breadcrumb">
-          <a onclick="showPromotionView()">포스 홈</a><span class="breadcrumb-sep">/</span>
-          <a onclick="showPromotionView()">프로모션 관리</a><span class="breadcrumb-sep">/</span>
-          <a onclick="showBenefitDashboard()">Benefit 관리</a><span class="breadcrumb-sep">/</span>
-          Benefit 관리 대시보드
-        </div>
-        <div class="subhead">
-          <div>
-            <h1>고수 Benefit 관리</h1>
-          </div>
-        </div>
-        <div class="search-card">
-          <div class="search-row">
-            <div class="fg"><label>Benefit 이벤트명</label><input type="text" placeholder="이벤트명 검색" style="width:240px"></div>
-            <div class="fg"><label>상태</label><select style="width:130px"><option>전체</option><option>대기</option><option>진행 중</option><option>종료</option></select></div>
-            <div class="fg"><label>활성화 여부</label><select style="width:120px"><option>전체</option><option>On</option><option>Off</option></select></div>
-            <div class="fg"><label>견적 종류</label><select style="width:140px"><option>전체</option><option>일반견적</option><option>스마트견적</option></select></div>
-            <div class="fg" style="min-width:350px;">
-              <label>서비스</label>
-              <div class="triple-select" style="width:350px;">
-                <select>
-                  <option selected>이사</option>
-                  <option>청소</option>
-                  <option>설치/수리</option>
-                </select>
-                <select>
-                  <option selected>가정이사</option>
-                  <option>원룸/소형이사</option>
-                  <option>사무실이사</option>
-                </select>
-                <select>
-                  <option selected>국내 이사</option>
-                  <option>가정이사(투룸 이상)</option>
-                  <option>원룸/소형 이사</option>
-                </select>
-              </div>
-            </div>
-          </div>
-          <div class="search-row">
-            <div class="btn-group"><button class="btn btn-reset">초기화</button><button class="btn btn-search">검색</button></div>
-          </div>
-        </div>
-        <div class="tbl-ctrl">
-          <div class="result-count">총 <strong>38개</strong> Benefit 이벤트</div>
-          <div class="tbl-actions">
-            <button class="btn-primary" onclick="showBenefitRegister()">+ Benefit 등록</button>
-          </div>
-        </div>
-        <div class="tbl-wrap">
-          <div class="pg-row"><span>페이지당 크기</span><select><option>10</option><option>20</option><option>50</option></select><button class="pg-btn">‹</button><button class="pg-btn">›</button></div>
-          <table>
-            <thead>
-              <tr>
-                <th style="width:56px">No.</th>
-                <th style="width:240px">Benefit 이벤트명</th>
-                <th style="width:120px">견적 종류</th>
-                <th style="width:180px">카테고리 및 서비스</th>
-                <th style="width:136px">시작일자</th>
-                <th style="width:136px">종료일자</th>
-                <th style="width:92px">상태</th>
-                <th style="width:108px">활성화</th>
-                <th style="width:132px">최근 수정일자</th>
-                <th style="width:104px">최근 등록자</th>
-                <th style="width:140px">비고</th>
-                <th style="width:80px; text-align:center">관리</th>
-              </tr>
-            </thead>
-            <tbody>${benefitTableRows()}</tbody>
-          </table>
-          <div class="pg-row bottom"><span>페이지당 크기</span><select><option>10</option><option>20</option><option>50</option></select><button class="pg-btn">‹</button><button class="pg-btn">›</button></div>
-        </div>
+        <div class="breadcrumb"><a onclick="showPromotionView()">포스 홈</a><span class="breadcrumb-sep">/</span><a onclick="showPromotionView()">프로모션 관리</a><span class="breadcrumb-sep">/</span><a onclick="showBenefitDashboard()">Benefit 관리</a><span class="breadcrumb-sep">/</span>Benefit 관리 대시보드</div>
+        <div class="subhead"><div><h1>고수 Benefit 관리</h1></div></div>
+        ${promotionView().split('<div class="search-card">')[1].split('</div>\n        <div class="tbl-ctrl">')[0] ? '' : ''}
+        ${promotionView().slice(promotionView().indexOf('<div class="search-card">'))}
       `;
     }
 
-    let benefitConditionMode = 'csv';
-    let currentBenefitRegisterIsEdit = false;
-    let serviceModalOpen = false;
-    let selectedRegionCity = '전체';
-    let selectedRegionDistrict = '전체';
-    let selectedRegionDong = '전체';
-    let appliedRegionItems = ['전체'];
-    let activeServiceCategoryId = 'move-clean';
-    let activeServiceGroupId = 'move';
-    let selectedServiceItems = [{ key: 'service:영어 과외', label: '영어 과외', level: 'service' }];
-    let appliedServiceItems = [{ key: 'service:영어 과외', label: '영어 과외', level: 'service' }];
-
-    function isSelectedItem(key) {
-      return selectedServiceItems.some((item) => item.key === key);
+    function isSelectedItem(key) { return selectedServiceItems.some((item) => item.key === key); }
+    function isDraftItem(key) { return draftServiceItem?.key === key; }
+    function buildCategoryItem(category) { return { key:`category:${category.id}`, label:category.label, level:'category1' }; }
+    function buildGroupItem(group) { return { key:`group:${group.id}`, label:group.label, level:'category2' }; }
+    function buildServiceItem(serviceName) { return { key:`service:${serviceName}`, label:serviceName, level:'service' }; }
+    function getActiveServiceCategory() { return serviceModalCategories.find((category) => category.id === activeServiceCategoryId) || serviceModalCategories[0]; }
+    function getActiveServiceGroup() {
+      const category = getActiveServiceCategory();
+      return category.groups.find((group) => group.id === activeServiceGroupId) || category.groups[0];
     }
-
-    function buildCategoryItem(category) {
-      return { key: `category:${category.id}`, label: category.label, level: 'category1' };
-    }
-
-    function buildGroupItem(group) {
-      return { key: `group:${group.id}`, label: group.label, level: 'category2' };
-    }
-
-    function buildServiceItem(serviceName) {
-      return { key: `service:${serviceName}`, label: serviceName, level: 'service' };
-    }
-
-    function getActiveServiceCategory() {
-      return serviceModalCategories.find((category) => category.id === activeServiceCategoryId) || serviceModalCategories[0];
-    }
-
-    function getRegionDistricts(city) {
-      if (city === '전체') return ['전체'];
-      return ['전체', ...Object.keys(regionOptions[city] || {})];
-    }
-
-    function getRegionDongs(city, district) {
-      if (city === '전체' || district === '전체') return ['전체'];
-      return ['전체', ...(regionOptions[city]?.[district] || [])];
-    }
-
+    function getRegionDistricts(city) { if (city === '전체') return ['전체']; return ['전체', ...Object.keys(regionOptions[city] || {})]; }
+    function getRegionDongs(city, district) { if (city === '전체' || district === '전체') return ['전체']; return ['전체', ...(regionOptions[city]?.[district] || [])]; }
     function syncRegionSelection() {
-      if (selectedRegionCity === '전체') {
-        selectedRegionDistrict = '전체';
-        selectedRegionDong = '전체';
-        return;
-      }
+      if (selectedRegionCity === '전체') { selectedRegionDistrict = '전체'; selectedRegionDong = '전체'; return; }
       const districts = getRegionDistricts(selectedRegionCity);
-      if (!districts.includes(selectedRegionDistrict)) {
-        selectedRegionDistrict = districts[0];
-      }
-      if (selectedRegionDistrict === '전체') {
-        selectedRegionDong = '전체';
-        return;
-      }
+      if (!districts.includes(selectedRegionDistrict)) selectedRegionDistrict = districts[0];
+      if (selectedRegionDistrict === '전체') { selectedRegionDong = '전체'; return; }
       const dongs = getRegionDongs(selectedRegionCity, selectedRegionDistrict);
-      if (!dongs.includes(selectedRegionDong)) {
-        selectedRegionDong = dongs[0];
-      }
+      if (!dongs.includes(selectedRegionDong)) selectedRegionDong = dongs[0];
     }
-
     function formatRegionLabel(city, district, dong) {
       if (city === '전체') return '전체';
       if (district === '전체') return `${city} 전체`;
       if (dong === '전체') return `${city} ${district} 전체`;
       return `${city} ${district} ${dong}`;
     }
-
-    function getActiveServiceGroup() {
-      const category = getActiveServiceCategory();
-      return category.groups.find((group) => group.id === activeServiceGroupId) || category.groups[0];
+    function normalizeServiceSearchQuery(value) { return value.toLocaleLowerCase(); }
+    function getFilteredServiceResults() {
+      const normalizedQuery = normalizeServiceSearchQuery(serviceSearchQuery.trim());
+      if (!normalizedQuery) return [];
+      return serviceModalCategories.flatMap((category) =>
+        category.groups.flatMap((group) =>
+          group.services.filter((serviceName) => normalizeServiceSearchQuery(serviceName).includes(normalizedQuery)).map((serviceName) => ({
+            categoryLabel: category.label,
+            groupLabel: group.label,
+            serviceName
+          }))
+        )
+      );
     }
-
-    function renderServiceModal() {
-      if (!serviceModalOpen) return '';
-
+    function getServiceListMarkup() {
       const activeCategory = getActiveServiceCategory();
       const activeGroup = getActiveServiceGroup();
-
+      const filteredServiceResults = getFilteredServiceResults();
+      const isSearchingServices = Boolean(serviceSearchQuery.trim());
+      return {
+        title: isSearchingServices ? '검색 결과' : activeCategory.label.replace('/청소', '').replace('이사/청소', '이사'),
+        subtitle: isSearchingServices ? `${filteredServiceResults.length}건` : activeGroup.label,
+        rows: (isSearchingServices ? filteredServiceResults.map((result) => result.serviceName) : activeGroup.services).map((serviceName, index) => {
+          const result = isSearchingServices ? filteredServiceResults[index] : null;
+          return `
+            <div class="service-row">
+              <div class="service-row-copy">
+                <span>${serviceName}</span>
+                ${result ? `<div class="service-row-meta">${result.categoryLabel} > ${result.groupLabel}</div>` : ''}
+              </div>
+              <button type="button" class="service-check ${isDraftItem(buildServiceItem(serviceName).key) ? 'checked' : ''}" onclick="selectServiceDraft('${serviceName}')"></button>
+            </div>
+          `;
+        }).join('')
+      };
+    }
+    function updateServiceSearchResults() {
+      const titleNode = document.querySelector('[data-service-list-title]');
+      const subtitleNode = document.querySelector('[data-service-list-subtitle]');
+      const listNode = document.querySelector('[data-service-list]');
+      const addButton = document.querySelector('[data-service-add-button]');
+      if (!titleNode || !subtitleNode || !listNode || !addButton) return;
+      const listMarkup = getServiceListMarkup();
+      titleNode.textContent = listMarkup.title;
+      subtitleNode.textContent = listMarkup.subtitle;
+      listNode.innerHTML = listMarkup.rows;
+      addButton.classList.add('disabled');
+      addButton.removeAttribute('onclick');
+    }
+    function renderServiceModal() {
+      if (!serviceModalOpen) return '';
+      const activeCategory = getActiveServiceCategory();
+      const listMarkup = getServiceListMarkup();
+      const canAddDraftItem = Boolean(draftServiceItem) && !isSelectedItem(draftServiceItem.key) && selectedServiceItems.length < 20;
       return `
         <div class="service-modal" onclick="closeServiceModal()">
-          <div class="service-modal-panel" onclick="event.stopPropagation()">
+          <div class="service-modal-panel" onclick="stopEventPropagation(event)">
             <div class="service-modal-head">
               <div class="service-modal-title">서비스 추가</div>
               <button type="button" class="service-modal-close" onclick="closeServiceModal()">×</button>
@@ -832,16 +481,13 @@
                 <div class="service-search">
                   <div class="service-search-box">
                     <span>⌕</span>
-                    <input type="text" placeholder="띄어쓰기 동일하게 입력해야 검색됩니다">
+                    <input type="text" data-service-search-input value="${serviceSearchQuery}" oncompositionstart="startServiceSearchComposition()" oncompositionend="endServiceSearchComposition(this.value)" oninput="setServiceSearchQuery(this.value)" placeholder="띄어쓰기까지 동일하게 입력해야 검색됩니다(서비스만 검색 가능함)">
                   </div>
                 </div>
                 <div class="service-top-cats">
                   ${serviceModalCategories.map((category) => `
-                      <button type="button" class="service-top-cat ${category.id === activeCategory.id ? 'active' : ''}" onclick="setServiceCategory('${category.id}')">
-                      <span class="service-top-cat-icon">
-                        ${category.icon}
-                        <span class="service-level-toggle service-radio-toggle service-top-cat-toggle ${isSelectedItem(buildCategoryItem(category).key) ? 'checked' : ''}" onclick="event.stopPropagation(); toggleCategorySelection('${category.id}')"></span>
-                      </span>
+                    <button type="button" class="service-top-cat ${category.id === activeCategory.id ? 'active' : ''}" onclick="setServiceCategory('${category.id}')">
+                      <span class="service-top-cat-icon">${category.icon}<span class="service-level-toggle service-top-cat-toggle ${isDraftItem(buildCategoryItem(category).key) ? 'checked' : ''}" onclick="stopEventPropagation(event); selectCategoryDraft('${category.id}')"></span></span>
                       <span class="service-top-cat-label">${category.label}</span>
                     </button>
                   `).join('')}
@@ -849,33 +495,20 @@
                 <div class="service-picker">
                   <div class="service-subcats">
                     ${activeCategory.groups.map((group) => `
-                      <button type="button" class="service-subcat ${group.id === activeGroup.id ? 'active' : ''}" onclick="setServiceGroup('${group.id}')">
+                      <button type="button" class="service-subcat ${group.id === activeServiceGroupId ? 'active' : ''}" onclick="setServiceGroup('${group.id}')">
                         <span>${group.label}</span>
-                        <span class="service-level-toggle ${isSelectedItem(buildGroupItem(group).key) ? 'checked' : ''}" onclick="event.stopPropagation(); toggleGroupSelection('${group.id}')"></span>
+                        <span class="service-level-toggle ${isDraftItem(buildGroupItem(group).key) ? 'checked' : ''}" onclick="stopEventPropagation(event); selectGroupDraft('${group.id}')"></span>
                       </button>
                     `).join('')}
                   </div>
                   <div class="service-list-shell">
-                    <div class="service-list-head">
-                      <div>${activeCategory.label.replace('/청소', '').replace('이사/청소', '이사')}</div>
-                      <div>${activeGroup.label}</div>
-                    </div>
-                    <div class="service-list">
-                      ${activeGroup.services.map((serviceName) => `
-                        <div class="service-row">
-                          <span>${serviceName}</span>
-                          <button type="button" class="service-check ${isSelectedItem(buildServiceItem(serviceName).key) ? 'checked' : ''}" onclick="toggleServiceSelection('${serviceName}')"></button>
-                        </div>
-                      `).join('')}
-                    </div>
+                    <div class="service-list-head"><div data-service-list-title>${listMarkup.title}</div><div data-service-list-subtitle>${listMarkup.subtitle}</div></div>
+                    <div class="service-list" data-service-list>${listMarkup.rows}</div>
                   </div>
                 </div>
               </div>
               <div class="service-modal-side">
-                <div class="service-selected-head">
-                  <span>선택한 서비스</span>
-                  <span>${selectedServiceItems.length}/20</span>
-                </div>
+                <div class="service-selected-head"><span>선택한 서비스</span><span>${selectedServiceItems.length}/20</span></div>
                 <div class="service-selected-list">
                   ${selectedServiceItems.map((item) => `
                     <div class="service-selected-item">
@@ -885,6 +518,7 @@
                   `).join('')}
                 </div>
                 <div class="service-modal-footer">
+                  <button type="button" class="service-submit service-submit-secondary ${canAddDraftItem ? '' : 'disabled'}" data-service-add-button ${canAddDraftItem ? 'onclick="addDraftServiceItem()"' : ''}>추가하기</button>
                   <button type="button" class="service-submit ${selectedServiceItems.length ? 'active' : ''}" ${selectedServiceItems.length ? 'onclick="applySelectedServices()"' : ''}>등록하기</button>
                 </div>
               </div>
@@ -903,11 +537,7 @@
           <a onclick="showBenefitDashboard()">Benefit 관리 대시보드</a><span class="breadcrumb-sep">/</span>
           Benefit ${isEdit ? '수정' : '등록'}
         </div>
-        <div class="subhead">
-          <div>
-            <h1>Benefit event ${isEdit ? '수정' : '등록'}</h1>
-          </div>
-        </div>
+        <div class="subhead"><div><h1>Benefit event ${isEdit ? '수정' : '등록'}</h1></div></div>
         <div class="form-shell">
           <div>
             <div class="form-card">
@@ -920,36 +550,20 @@
                 </div>
               </div>
             </div>
-
             <div class="form-card">
               <div class="form-card-title">Benefit 적용 조건</div>
               <div class="radio-card-row">
-                <button type="button" class="radio-card ${benefitConditionMode === 'csv' ? 'active' : ''}" onclick="setBenefitConditionMode('csv', ${isEdit})">
-                  <span class="radio-dot"></span>
-                  <span>1. 특정 고수 업로드</span>
-                </button>
-                <button type="button" class="radio-card ${benefitConditionMode === 'filter' ? 'active' : ''}" onclick="setBenefitConditionMode('filter', ${isEdit})">
-                  <span class="radio-dot"></span>
-                  <span>2. 조건선택</span>
-                </button>
+                <button type="button" class="radio-card ${benefitConditionMode === 'csv' ? 'active' : ''}" onclick="setBenefitConditionMode('csv', ${isEdit})"><span class="radio-dot"></span><span>1. 특정 고수 업로드</span></button>
+                <button type="button" class="radio-card ${benefitConditionMode === 'filter' ? 'active' : ''}" onclick="setBenefitConditionMode('filter', ${isEdit})"><span class="radio-dot"></span><span>2. 조건선택</span></button>
               </div>
-              ${benefitConditionMode === 'filter' ? `
-                <div class="hint" style="margin-bottom:18px;">서비스가 진행된 이후에는 수정이 불가합니다</div>
-              ` : ''}
+              ${benefitConditionMode === 'filter' ? `<div class="hint" style="margin-bottom:18px;">서비스가 진행된 이후에는 수정이 불가합니다</div>` : ''}
               ${benefitConditionMode === 'csv' ? `
                 <div class="ff-grid">
-                  <div class="ff full">
+                  <div class="ff" style="grid-column:1 / -1;">
                     <label>CSV 업로드 <span class="req">*</span></label>
                     <div class="upload-box">
-                      <div class="upload-actions">
-                        <button type="button" class="upload-btn">파일 선택</button>
-                        <button type="button" class="upload-btn">CSV 템플릿</button>
-                      </div>
-                      <div class="upload-meta">
-                        <div>파일 형식 : CSV, XLSX</div>
-                        <div>파일 용량 : 최대 10MB</div>
-                        <div>CSV를 재업로드하면 기존에 등록된 고수는 유지되고, 새로운 고수만 추가됩니다</div>
-                      </div>
+                      <div class="upload-actions"><button type="button" class="service-trigger">파일 선택</button><button type="button" class="service-trigger">CSV 템플릿</button></div>
+                      <div class="hint">파일 형식 : CSV, XLSX\n파일 용량 : 최대 10MB\nCSV를 재업로드하면 기존에 등록된 고수는 유지되고, 새로운 고수만 추가됩니다</div>
                     </div>
                   </div>
                 </div>
@@ -959,65 +573,22 @@
                     <label>지역 <span class="req">*</span></label>
                     <div class="area-select-wrap">
                       <div class="triple-select">
-                        <select onchange="setRegionCity(this.value)">
-                          ${['전체', ...Object.keys(regionOptions)].map((city) => `
-                            <option value="${city}" ${city === selectedRegionCity ? 'selected' : ''}>${city}</option>
-                          `).join('')}
-                        </select>
-                        <select onchange="setRegionDistrict(this.value)">
-                          ${getRegionDistricts(selectedRegionCity).map((district) => `
-                            <option value="${district}" ${district === selectedRegionDistrict ? 'selected' : ''}>${district}</option>
-                          `).join('')}
-                        </select>
-                        <select onchange="setRegionDong(this.value)">
-                          ${getRegionDongs(selectedRegionCity, selectedRegionDistrict).map((dong) => `
-                            <option value="${dong}" ${dong === selectedRegionDong ? 'selected' : ''}>${dong}</option>
-                          `).join('')}
-                        </select>
+                        <select onchange="setRegionCity(this.value)">${['전체', ...Object.keys(regionOptions)].map((city) => `<option value="${city}" ${city === selectedRegionCity ? 'selected' : ''}>${city}</option>`).join('')}</select>
+                        <select onchange="setRegionDistrict(this.value)">${getRegionDistricts(selectedRegionCity).map((district) => `<option value="${district}" ${district === selectedRegionDistrict ? 'selected' : ''}>${district}</option>`).join('')}</select>
+                        <select onchange="setRegionDong(this.value)">${getRegionDongs(selectedRegionCity, selectedRegionDistrict).map((dong) => `<option value="${dong}" ${dong === selectedRegionDong ? 'selected' : ''}>${dong}</option>`).join('')}</select>
                       </div>
                       <button type="button" class="area-add-btn" onclick="addSelectedRegion()">지역 추가</button>
-                      ${appliedRegionItems.length ? `
-                        <div class="selected-service-stack">
-                          ${appliedRegionItems.map((areaLabel) => `
-                            <div class="selected-service-card">
-                              <span>${areaLabel}</span>
-                              <button type="button" class="selected-service-remove" onclick="removeAppliedRegion('${areaLabel}')">×</button>
-                            </div>
-                          `).join('')}
-                        </div>
-                      ` : `
-                        <div class="selected-service-empty">아직 추가된 지역이 없습니다.</div>
-                      `}
+                      ${appliedRegionItems.length ? `<div class="selected-service-stack">${appliedRegionItems.map((areaLabel) => `<div class="selected-service-card"><span>${areaLabel}</span><button type="button" class="selected-service-remove" onclick="removeAppliedRegion('${areaLabel}')">×</button></div>`).join('')}</div>` : `<div class="selected-service-empty">아직 추가된 지역이 없습니다.</div>`}
                     </div>
                   </div>
                   <div class="ff">
                     <label>서비스</label>
                     <button type="button" class="service-trigger" onclick="openServiceModal()">서비스 등록하기</button>
-                    ${appliedServiceItems.length ? `
-                      <div class="selected-service-stack">
-                        ${appliedServiceItems.map((item) => `
-                          <div class="selected-service-card">
-                            <span>${item.label}</span>
-                            <button type="button" class="selected-service-remove" onclick="removeAppliedService('${item.key}')">×</button>
-                          </div>
-                        `).join('')}
-                      </div>
-                    ` : `
-                      <div class="selected-service-empty">아직 추가된 서비스가 없습니다.</div>
-                    `}
-                  </div>
-                  <div class="ff">
-                    <label>견적 유형</label>
-                    <select>
-                      <option>전체</option>
-                      <option selected>스마트견적</option>
-                      <option>일반견적</option>
-                    </select>
+                    ${appliedServiceItems.length ? `<div class="selected-service-stack">${appliedServiceItems.map((item) => `<div class="selected-service-card"><span>${item.label}</span><button type="button" class="selected-service-remove" onclick="removeAppliedService('${item.key}')">×</button></div>`).join('')}</div>` : `<div class="selected-service-empty">아직 추가된 서비스가 없습니다.</div>`}
                   </div>
                 </div>
               `}
             </div>
-
             <div class="form-card">
               <div class="form-card-title">노출 및 혜택 설정</div>
               <div class="ff-grid">
@@ -1025,160 +596,53 @@
                   <label>노출 시작일 <span class="req">*</span></label>
                   <input type="text" ${isEdit ? 'value="2026-04-05 00:00"' : 'placeholder="yyyy-mm-dd hh:mm"'}>
                   <div class="hint">활성화되어 있다면 노출 시작일에 사용자에게 자동 노출됩니다</div>
-                  <div style="margin-top:16px;">
-                    <label>페이백 % <span class="req">*</span></label>
-                    <input type="number" min="0" step="1" ${isEdit ? 'value="10"' : 'placeholder="정수값 입력"'}>
-                    <div class="hint">정수값만 입력 가능합니다</div>
-                  </div>
                 </div>
                 <div class="ff">
                   <label>노출 종료일 <span class="req">*</span></label>
                   <input type="text" ${isEdit ? 'value="2026-04-30 23:59"' : 'placeholder="yyyy-mm-dd hh:mm"'}>
                   <div class="hint">미입력 시 상시노출됩니다</div>
                 </div>
+                <div class="ff">
+                  <label>페이백 % <span class="req">*</span></label>
+                  <input type="number" min="0" step="1" ${isEdit ? 'value="10"' : 'placeholder="정수값 입력"'}>
+                  <div class="hint">정수값만 입력 가능합니다</div>
+                </div>
+                <div class="ff">
+                  <label>견적 유형</label>
+                  <select><option>전체</option><option selected>스마트견적</option><option>일반견적</option></select>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="form-footer">
-          <button class="btn-back" onclick="showBenefitDashboard()">대시보드로</button>
-          <button class="btn-save">${isEdit ? '수정' : '등록'}</button>
-        </div>
+        <div class="form-footer"><button class="btn-back" onclick="showBenefitDashboard()">대시보드로</button><button class="btn-save">${isEdit ? '수정' : '등록'}</button></div>
         ${renderServiceModal()}
       `;
     }
 
-    function showPromotionView(keepScroll = false) {
-      setActiveMenu('benefit');
-      render(promotionView(), keepScroll);
-    }
-
-    function showBenefitDashboard(keepScroll = false) {
-      setActiveMenu('benefit');
-      render(benefitDashboardView(), keepScroll);
-    }
-
-    function showBenefitRegister(isEdit = false, keepScroll = false) {
-      currentBenefitRegisterIsEdit = Boolean(isEdit);
-      setActiveMenu('benefit');
-      render(benefitRegisterView(isEdit), keepScroll);
-    }
-
-    function setBenefitConditionMode(mode, isEdit = false) {
-      benefitConditionMode = mode;
-      showBenefitRegister(Boolean(isEdit), true);
-    }
-
-    function openServiceModal() {
-      selectedServiceItems = appliedServiceItems.map((item) => ({ ...item }));
-      serviceModalOpen = true;
-      showBenefitRegister(currentBenefitRegisterIsEdit, true);
-    }
-
-    function setRegionCity(city) {
-      selectedRegionCity = city;
-      syncRegionSelection();
-      showBenefitRegister(currentBenefitRegisterIsEdit, true);
-    }
-
-    function setRegionDistrict(district) {
-      selectedRegionDistrict = district;
-      syncRegionSelection();
-      showBenefitRegister(currentBenefitRegisterIsEdit, true);
-    }
-
-    function setRegionDong(dong) {
-      selectedRegionDong = dong;
-      showBenefitRegister(currentBenefitRegisterIsEdit, true);
-    }
-
-    function addSelectedRegion() {
-      syncRegionSelection();
-      const areaLabel = formatRegionLabel(selectedRegionCity, selectedRegionDistrict, selectedRegionDong);
-      if (!appliedRegionItems.includes(areaLabel)) {
-        appliedRegionItems = [...appliedRegionItems, areaLabel];
-      }
-      showBenefitRegister(currentBenefitRegisterIsEdit, true);
-    }
-
-    function removeAppliedRegion(areaLabel) {
-      appliedRegionItems = appliedRegionItems.filter((item) => item !== areaLabel);
-      showBenefitRegister(currentBenefitRegisterIsEdit, true);
-    }
-
-    function closeServiceModal() {
-      serviceModalOpen = false;
-      showBenefitRegister(currentBenefitRegisterIsEdit, true);
-    }
-
-    function setServiceCategory(categoryId) {
-      activeServiceCategoryId = categoryId;
-      const category = getActiveServiceCategory();
-      activeServiceGroupId = category.groups[0].id;
-      showBenefitRegister(currentBenefitRegisterIsEdit, true);
-    }
-
-    function setServiceGroup(groupId) {
-      activeServiceGroupId = groupId;
-      showBenefitRegister(currentBenefitRegisterIsEdit, true);
-    }
-
-    function toggleServiceSelection(serviceName) {
-      const item = buildServiceItem(serviceName);
-      if (isSelectedItem(item.key)) {
-        selectedServiceItems = selectedServiceItems.filter((selectedItem) => selectedItem.key !== item.key);
-      } else if (selectedServiceItems.length < 20) {
-        selectedServiceItems = [...selectedServiceItems, item];
-      }
-      showBenefitRegister(currentBenefitRegisterIsEdit, true);
-    }
-
-    function applySelectedServices() {
-      appliedServiceItems = selectedServiceItems.map((item) => ({ ...item }));
-      serviceModalOpen = false;
-      showBenefitRegister(currentBenefitRegisterIsEdit, true);
-    }
-
-    function toggleCategorySelection(categoryId) {
-      const category = serviceModalCategories.find((item) => item.id === categoryId);
-      if (!category) return;
-      const item = buildCategoryItem(category);
-      activeServiceCategoryId = categoryId;
-      activeServiceGroupId = category.groups[0].id;
-      if (isSelectedItem(item.key)) {
-        selectedServiceItems = selectedServiceItems.filter((selectedItem) => selectedItem.key !== item.key);
-      } else {
-        const withoutCategoryItems = selectedServiceItems.filter((selectedItem) => selectedItem.level !== 'category1');
-        if (withoutCategoryItems.length < 20) {
-          selectedServiceItems = [...withoutCategoryItems, item];
-        }
-      }
-      showBenefitRegister(currentBenefitRegisterIsEdit, true);
-    }
-
-    function toggleGroupSelection(groupId) {
-      const category = getActiveServiceCategory();
-      const group = category.groups.find((item) => item.id === groupId);
-      if (!group) return;
-      const item = buildGroupItem(group);
-      if (isSelectedItem(item.key)) {
-        selectedServiceItems = selectedServiceItems.filter((selectedItem) => selectedItem.key !== item.key);
-      } else if (selectedServiceItems.length < 20) {
-        selectedServiceItems = [...selectedServiceItems, item];
-      }
-      showBenefitRegister(currentBenefitRegisterIsEdit, true);
-    }
-
-    function removeSelectedItem(itemKey) {
-      selectedServiceItems = selectedServiceItems.filter((item) => item.key !== itemKey);
-      showBenefitRegister(currentBenefitRegisterIsEdit, true);
-    }
-
-    function removeAppliedService(itemKey) {
-      appliedServiceItems = appliedServiceItems.filter((item) => item.key !== itemKey);
-      selectedServiceItems = selectedServiceItems.filter((item) => item.key !== itemKey);
-      showBenefitRegister(currentBenefitRegisterIsEdit, true);
-    }
+    function showPromotionView(keepScroll = false) { setActiveMenu('benefit'); render(promotionView(), keepScroll); }
+    function showBenefitDashboard(keepScroll = false) { setActiveMenu('benefit'); render(promotionView(), keepScroll); }
+    function showBenefitRegister(isEdit = false, keepScroll = false) { currentBenefitRegisterIsEdit = Boolean(isEdit); setActiveMenu('benefit'); render(benefitRegisterView(isEdit), keepScroll); }
+    function setBenefitConditionMode(mode, isEdit = false) { benefitConditionMode = mode; showBenefitRegister(Boolean(isEdit), true); }
+    function openServiceModal() { selectedServiceItems = appliedServiceItems.map((item) => ({ ...item })); serviceSearchQuery = ''; draftServiceItem = null; serviceModalOpen = true; showBenefitRegister(currentBenefitRegisterIsEdit, true); }
+    function setRegionCity(city) { selectedRegionCity = city; syncRegionSelection(); showBenefitRegister(currentBenefitRegisterIsEdit, true); }
+    function setRegionDistrict(district) { selectedRegionDistrict = district; syncRegionSelection(); showBenefitRegister(currentBenefitRegisterIsEdit, true); }
+    function setRegionDong(dong) { selectedRegionDong = dong; showBenefitRegister(currentBenefitRegisterIsEdit, true); }
+    function addSelectedRegion() { syncRegionSelection(); const areaLabel = formatRegionLabel(selectedRegionCity, selectedRegionDistrict, selectedRegionDong); if (!appliedRegionItems.includes(areaLabel)) appliedRegionItems = [...appliedRegionItems, areaLabel]; showBenefitRegister(currentBenefitRegisterIsEdit, true); }
+    function removeAppliedRegion(areaLabel) { appliedRegionItems = appliedRegionItems.filter((item) => item !== areaLabel); showBenefitRegister(currentBenefitRegisterIsEdit, true); }
+    function closeServiceModal() { serviceModalOpen = false; showBenefitRegister(currentBenefitRegisterIsEdit, true); }
+    function setServiceCategory(categoryId) { activeServiceCategoryId = categoryId; const category = getActiveServiceCategory(); activeServiceGroupId = category.groups[0].id; showBenefitRegister(currentBenefitRegisterIsEdit, true); }
+    function setServiceGroup(groupId) { activeServiceGroupId = groupId; showBenefitRegister(currentBenefitRegisterIsEdit, true); }
+    function startServiceSearchComposition() { isServiceSearchComposing = true; }
+    function endServiceSearchComposition(value) { isServiceSearchComposing = false; serviceSearchQuery = value; draftServiceItem = null; updateServiceSearchResults(); }
+    function setServiceSearchQuery(value) { if (isServiceSearchComposing) { serviceSearchQuery = value; return; } serviceSearchQuery = value; draftServiceItem = null; updateServiceSearchResults(); }
+    function selectServiceDraft(serviceName) { draftServiceItem = buildServiceItem(serviceName); showBenefitRegister(currentBenefitRegisterIsEdit, true); }
+    function addDraftServiceItem() { if (!draftServiceItem) return; if (!isSelectedItem(draftServiceItem.key) && selectedServiceItems.length < 20) selectedServiceItems = [...selectedServiceItems, { ...draftServiceItem }]; showBenefitRegister(currentBenefitRegisterIsEdit, true); }
+    function applySelectedServices() { appliedServiceItems = selectedServiceItems.map((item) => ({ ...item })); serviceModalOpen = false; showBenefitRegister(currentBenefitRegisterIsEdit, true); }
+    function selectCategoryDraft(categoryId) { const category = serviceModalCategories.find((item) => item.id === categoryId); if (!category) return; activeServiceCategoryId = categoryId; activeServiceGroupId = category.groups[0].id; draftServiceItem = buildCategoryItem(category); showBenefitRegister(currentBenefitRegisterIsEdit, true); }
+    function selectGroupDraft(groupId) { const category = getActiveServiceCategory(); const group = category.groups.find((item) => item.id === groupId); if (!group) return; draftServiceItem = buildGroupItem(group); showBenefitRegister(currentBenefitRegisterIsEdit, true); }
+    function removeSelectedItem(itemKey) { selectedServiceItems = selectedServiceItems.filter((item) => item.key !== itemKey); if (draftServiceItem?.key === itemKey) draftServiceItem = null; showBenefitRegister(currentBenefitRegisterIsEdit, true); }
+    function removeAppliedService(itemKey) { appliedServiceItems = appliedServiceItems.filter((item) => item.key !== itemKey); selectedServiceItems = selectedServiceItems.filter((item) => item.key !== itemKey); showBenefitRegister(currentBenefitRegisterIsEdit, true); }
 
     showPromotionView();
   </script>
