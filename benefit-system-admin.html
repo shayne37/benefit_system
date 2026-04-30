@@ -218,6 +218,145 @@
     .sort-meta strong { display:block; font-size:13px; color:#111827; margin-bottom:4px; }
     .sort-meta span { font-size:12px; color:#6b7280; }
     .sort-handle { width:38px; min-width:38px; padding:0; background:#fff; border:1px solid #d1d5db; color:#6b7280; font-weight:700; }
+    .service-trigger {
+      width:100%; height:40px; display:flex; align-items:center; justify-content:center;
+      padding:0 14px; border:1px solid #d1d5db; border-radius:8px; background:#fff;
+      color:#4b5563; font-size:14px; font-weight:600; cursor:pointer;
+    }
+    .service-trigger:hover { border-color:#693BF2; color:#693BF2; }
+    .selected-service-stack { display:grid; gap:8px; margin-top:10px; }
+    .selected-service-card {
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+      min-height:40px; padding:10px 12px; border:1px solid #e5e7eb; border-radius:10px;
+      background:#f8fafc; color:#111827; font-size:14px; font-weight:600;
+    }
+    .selected-service-remove {
+      width:22px; height:22px; border:none; border-radius:50%; background:#cbd5e1; color:#fff;
+      font-size:14px; line-height:1; cursor:pointer; flex-shrink:0;
+    }
+    .selected-service-empty {
+      margin-top:10px; font-size:12px; color:#94a3b8; line-height:1.5;
+    }
+    .area-select-wrap { display:grid; gap:10px; }
+    .area-add-btn {
+      width:100%; height:40px; border:1px solid #d1d5db; border-radius:8px; background:#fff;
+      color:#4b5563; font-size:14px; font-weight:600; cursor:pointer;
+    }
+    .area-add-btn:hover { border-color:#693BF2; color:#693BF2; }
+    .service-modal {
+      position:fixed; inset:0; z-index:300; display:flex; align-items:center; justify-content:center;
+      padding:24px; background:rgba(15,23,42,0.28);
+    }
+    .service-modal-panel {
+      width:min(980px, calc(100vw - 48px)); height:min(760px, calc(100vh - 48px));
+      background:#fff; border-radius:20px; box-shadow:0 24px 80px rgba(15,23,42,0.22);
+      display:flex; flex-direction:column; overflow:hidden;
+    }
+    .service-modal-head {
+      display:flex; align-items:center; justify-content:space-between; padding:22px 10px 18px 24px;
+      border-bottom:1px solid #eef2f7;
+    }
+    .service-modal-title { font-size:18px; font-weight:800; color:#111827; }
+    .service-modal-close {
+      width:40px; height:40px; border:none; background:none; border-radius:10px; cursor:pointer;
+      font-size:28px; line-height:1; color:#111827;
+    }
+    .service-modal-body { flex:1; display:grid; grid-template-columns:minmax(0, 1fr) 286px; min-height:0; }
+    .service-modal-main { min-width:0; display:flex; flex-direction:column; border-right:1px solid #eef2f7; }
+    .service-search {
+      padding:14px 16px 12px; border-bottom:1px solid #f3f4f6;
+    }
+    .service-search-box {
+      height:44px; border-radius:12px; background:#f1f5f9; display:flex; align-items:center; gap:10px;
+      padding:0 14px; color:#94a3b8; font-size:15px;
+    }
+    .service-search-box input {
+      flex:1; height:100%; border:none; outline:none; background:transparent; color:#334155; font-size:15px;
+    }
+    .service-top-cats {
+      display:grid; grid-template-columns:repeat(8, minmax(0, 1fr)); gap:16px; padding:18px 16px 14px;
+      border-bottom:1px solid #eef2f7;
+    }
+    .service-top-cat {
+      display:grid; justify-items:center; gap:10px; cursor:pointer; color:#64748b;
+      border:none; background:none; padding:0;
+    }
+    .service-top-cat-icon {
+      position:relative; width:58px; height:58px; border-radius:14px; border:1px solid #e2e8f0; background:#fff;
+      display:flex; align-items:center; justify-content:center; font-size:30px; box-shadow:0 4px 14px rgba(15,23,42,0.05);
+    }
+    .service-top-cat-label { font-size:14px; font-weight:700; white-space:nowrap; }
+    .service-top-cat.active { color:#111827; }
+    .service-top-cat.active .service-top-cat-icon { border-color:#111827; }
+    .service-level-toggle {
+      width:20px; height:20px; border-radius:6px; border:2px solid #cbd5e1; background:#fff; cursor:pointer; flex-shrink:0;
+    }
+    .service-level-toggle.checked {
+      border-color:#693BF2; background:#693BF2; box-shadow:inset 0 0 0 3px #fff;
+    }
+    .service-radio-toggle { border-radius:50%; }
+    .service-radio-toggle.checked { box-shadow:inset 0 0 0 4px #fff; }
+    .service-top-cat-toggle {
+      position:absolute; right:-5px; top:-5px; width:20px; height:20px;
+    }
+    .service-picker {
+      flex:1; min-height:0; display:grid; grid-template-columns:152px minmax(0, 1fr);
+    }
+    .service-subcats {
+      background:#f8fafc; border-right:1px solid #eef2f7; overflow:auto;
+    }
+    .service-subcat {
+      width:100%; display:flex; align-items:center; justify-content:space-between; gap:10px;
+      text-align:left; border:none; background:none; padding:16px 16px;
+      color:#94a3b8; font-size:15px; font-weight:700; cursor:pointer;
+    }
+    .service-subcat.active { background:#eef2f7; color:#111827; }
+    .service-list-shell { display:flex; flex-direction:column; min-width:0; }
+    .service-list-head {
+      display:grid; grid-template-columns:minmax(0, 1fr) minmax(0, 1fr); gap:18px;
+      padding:18px 16px 8px; color:#111827; font-size:16px; font-weight:800;
+    }
+    .service-list {
+      flex:1; overflow:auto; padding:0 0 8px;
+    }
+    .service-row {
+      display:grid; grid-template-columns:minmax(0, 1fr) 32px; gap:16px; align-items:center;
+      padding:18px 16px; border-top:1px solid #f8fafc;
+    }
+    .service-row span { font-size:16px; color:#111827; line-height:1.4; }
+    .service-check {
+      width:22px; height:22px; border-radius:6px; border:2px solid #cbd5e1; background:#fff; cursor:pointer;
+    }
+    .service-check.checked {
+      border-color:#693BF2; background:#693BF2; box-shadow:inset 0 0 0 4px #fff;
+    }
+    .service-modal-side {
+      display:flex; flex-direction:column; min-width:0; background:#fff;
+    }
+    .service-selected-head {
+      display:flex; align-items:center; justify-content:space-between; padding:18px 14px 14px 16px;
+      color:#111827; font-size:15px; font-weight:800;
+    }
+    .service-selected-list {
+      flex:1; overflow:auto; padding:0 8px 16px 16px;
+    }
+    .service-selected-item {
+      display:flex; align-items:center; justify-content:space-between; gap:12px; padding:14px 0;
+      border-bottom:1px solid #f8fafc;
+    }
+    .service-selected-item span { font-size:16px; color:#111827; }
+    .service-remove {
+      width:22px; height:22px; border:none; border-radius:50%; background:#cbd5e1; color:#fff;
+      font-size:14px; cursor:pointer;
+    }
+    .service-modal-footer {
+      padding:14px 14px 14px 16px; border-top:1px solid #eef2f7; display:flex; justify-content:flex-end;
+    }
+    .service-submit {
+      width:150px; height:48px; border:none; border-radius:12px; background:#cbd5e1;
+      color:#fff; font-size:20px; font-weight:800; cursor:not-allowed;
+    }
+    .service-submit.active { background:#693BF2; cursor:pointer; }
     @media (max-width: 1180px) {
       .form-shell { grid-template-columns:1fr; }
       .form-footer { max-width:none; }
@@ -228,6 +367,12 @@
       .sidebar { position:static; width:100%; height:auto; }
       .main { margin-left:0; }
       .ff-grid { grid-template-columns:1fr; }
+      .service-modal { padding:10px; }
+      .service-modal-panel { width:100vw; height:100vh; max-width:none; max-height:none; border-radius:0; }
+      .service-modal-body { grid-template-columns:1fr; }
+      .service-modal-main { border-right:none; border-bottom:1px solid #eef2f7; }
+      .service-top-cats { grid-template-columns:repeat(4, minmax(0, 1fr)); }
+      .service-picker { grid-template-columns:120px minmax(0, 1fr); }
     }
   </style>
 </head>
@@ -282,6 +427,108 @@
       { no: 36, code: 'BENEFIT-240320-03', name: '도배/장판 지방권 응답 회복', type: '수수료 할인', quoteType: '일반견적', service: '도배장판 시공', start: '2026-03-20 00:00', end: '2026-03-31 23:59', status: '종료', active: false, updated: '2026-03-31 09:48', editor: 'Shayne Kim', note: '', editable: true },
       { no: 35, code: 'BENEFIT-240315-07', name: '웨딩 본식 촬영 고수 확보 캠페인', type: 'Payback', quoteType: '스마트견적', service: '웨딩스냅 촬영', start: '2026-04-08 10:00', end: '2026-05-08 23:59', status: '대기', active: false, updated: '2026-03-30 11:12', editor: 'Shayne Kim', note: '', editable: true }
     ];
+    const regionOptions = {
+      '서울특별시': {
+        '강남구': ['역삼동', '논현동', '삼성동'],
+        '서초구': ['서초동', '방배동', '잠원동'],
+        '송파구': ['잠실동', '문정동', '가락동']
+      },
+      '부산광역시': {
+        '해운대구': ['우동', '중동', '좌동'],
+        '수영구': ['광안동', '남천동', '민락동'],
+        '동래구': ['온천동', '명륜동', '사직동']
+      },
+      '대구광역시': {
+        '수성구': ['범어동', '만촌동', '황금동'],
+        '중구': ['동성로', '삼덕동', '남산동'],
+        '달서구': ['상인동', '죽전동', '이곡동']
+      }
+    };
+    const serviceModalCategories = [
+      {
+        id: 'move-clean',
+        icon: '🚚',
+        label: '이사/청소',
+        groups: [
+          { id: 'move', label: '이사', services: ['가정이사(투룸 이상)', '국내 이사', '무진동차량/냉동차량/냉장차량', '사무실/상업공간 이사', '용달/화물 운송', '원룸/소형 이사', '상조 가전결합 상품'] },
+          { id: 'move-clean-home', label: '입주/집 청소', services: ['입주 청소', '거주 청소', '이사 청소'] },
+          { id: 'home-clean', label: '가전/가구 청소', services: ['에어컨 청소', '세탁기 청소', '매트리스 청소'] },
+          { id: 'biz-clean', label: '사업장 청소', services: ['사무실 청소', '상가 청소', '정기 청소'] },
+          { id: 'special-clean', label: '특수 청소', services: ['화재 청소', '침수 청소', '폐기물 정리'] },
+          { id: 'removal', label: '철거/폐기', services: ['가구 철거', '주방 철거', '생활 폐기물 수거'] }
+        ]
+      },
+      {
+        id: 'install',
+        icon: '🔧',
+        label: '설치/수리',
+        groups: [
+          { id: 'appliance-install', label: '가전 설치', services: ['에어컨 설치', 'TV 벽걸이 설치', '세탁기 설치', '건조기 설치'] },
+          { id: 'smart-device', label: '스마트기기 설치', services: ['CCTV 설치', '도어락 설치', '인터폰 교체'] },
+          { id: 'repair', label: '생활 수리', services: ['문 수리', '수도 수리', '전기 수리', '방충망 수리'] }
+        ]
+      },
+      {
+        id: 'interior',
+        icon: '🛋️',
+        label: '인테리어',
+        groups: [
+          { id: 'wall', label: '도배/장판', services: ['도배 시공', '장판 시공', '벽지 부분 보수'] },
+          { id: 'space-style', label: '공간 스타일링', services: ['홈스타일링', '상업공간 스타일링', '가구 배치 컨설팅'] },
+          { id: 'construction', label: '부분 시공', services: ['욕실 리모델링', '주방 리모델링', '중문 설치'] }
+        ]
+      },
+      {
+        id: 'outsourcing',
+        icon: '💼',
+        label: '외주',
+        groups: [
+          { id: 'design', label: '디자인', services: ['상세페이지 제작', '배너 디자인', '브랜드 키비주얼 제작'] },
+          { id: 'content', label: '콘텐츠 제작', services: ['블로그 원고 작성', 'SNS 콘텐츠 제작', '영상 자막 작업'] },
+          { id: 'dev', label: '개발', services: ['랜딩페이지 제작', '노코드 자동화 구축', '웹 유지보수'] }
+        ]
+      },
+      {
+        id: 'event-beauty',
+        icon: '🎀',
+        label: '이벤트/뷰티',
+        groups: [
+          { id: 'wedding', label: '웨딩', services: ['웨딩 메이크업', '웨딩 촬영', '본식 헤어 스타일링'] },
+          { id: 'party', label: '행사', services: ['행사 사회자 섭외', '포토부스 대여', '출장 데코레이션'] },
+          { id: 'beauty', label: '뷰티', services: ['퍼스널 메이크업', '출장 네일', '프로필 헤어메이크업'] }
+        ]
+      },
+      {
+        id: 'job',
+        icon: '🪪',
+        label: '취업/직무',
+        groups: [
+          { id: 'career', label: '커리어', services: ['이력서 첨삭', '면접 코칭', '자기소개서 첨삭'] },
+          { id: 'office-skill', label: '직무 스킬', services: ['엑셀 과외', 'PPT 코칭', '데이터 분석 입문'] },
+          { id: 'cert', label: '자격증', services: ['컴활 대비', '토익스피킹 대비', '면접 스터디 코칭'] }
+        ]
+      },
+      {
+        id: 'lesson',
+        icon: '🎓',
+        label: '과외',
+        groups: [
+          { id: 'language', label: '언어 과외', services: ['영어 과외', '일본어 과외', '중국어 과외'] },
+          { id: 'school', label: '학교 과외', services: ['수학 과외', '국어 과외', '과학 과외', '사회 과외'] },
+          { id: 'exam', label: '시험 대비', services: ['수능 영어 대비', '토플 과외', '아이엘츠 과외'] }
+        ]
+      },
+      {
+        id: 'hobby',
+        icon: '🏀',
+        label: '취미/자기계발',
+        groups: [
+          { id: 'sports', label: '스포츠', services: ['농구 레슨', '테니스 레슨', '수영 레슨'] },
+          { id: 'music', label: '음악', services: ['보컬 레슨', '기타 레슨', '피아노 레슨'] },
+          { id: 'life', label: '자기계발', services: ['발표 코칭', '습관 코칭', '퍼스널 브랜딩'] }
+        ]
+      }
+    ];
 
     function setActiveMenu(key) {
       document.querySelectorAll('.menu-sub .menu-item').forEach((el) => {
@@ -289,9 +536,10 @@
       });
     }
 
-    function render(html) {
+    function render(html, keepScroll = false) {
+      const currentScrollY = window.scrollY;
       document.getElementById('main-area').innerHTML = html;
-      window.scrollTo({ top: 0, behavior: 'auto' });
+      window.scrollTo({ top: keepScroll ? currentScrollY : 0, behavior: 'auto' });
     }
 
     function statusTag(status) {
@@ -493,6 +741,158 @@
     }
 
     let benefitConditionMode = 'csv';
+    let currentBenefitRegisterIsEdit = false;
+    let serviceModalOpen = false;
+    let selectedRegionCity = '전체';
+    let selectedRegionDistrict = '전체';
+    let selectedRegionDong = '전체';
+    let appliedRegionItems = ['전체'];
+    let activeServiceCategoryId = 'move-clean';
+    let activeServiceGroupId = 'move';
+    let selectedServiceItems = [{ key: 'service:영어 과외', label: '영어 과외', level: 'service' }];
+    let appliedServiceItems = [{ key: 'service:영어 과외', label: '영어 과외', level: 'service' }];
+
+    function isSelectedItem(key) {
+      return selectedServiceItems.some((item) => item.key === key);
+    }
+
+    function buildCategoryItem(category) {
+      return { key: `category:${category.id}`, label: category.label, level: 'category1' };
+    }
+
+    function buildGroupItem(group) {
+      return { key: `group:${group.id}`, label: group.label, level: 'category2' };
+    }
+
+    function buildServiceItem(serviceName) {
+      return { key: `service:${serviceName}`, label: serviceName, level: 'service' };
+    }
+
+    function getActiveServiceCategory() {
+      return serviceModalCategories.find((category) => category.id === activeServiceCategoryId) || serviceModalCategories[0];
+    }
+
+    function getRegionDistricts(city) {
+      if (city === '전체') return ['전체'];
+      return ['전체', ...Object.keys(regionOptions[city] || {})];
+    }
+
+    function getRegionDongs(city, district) {
+      if (city === '전체' || district === '전체') return ['전체'];
+      return ['전체', ...(regionOptions[city]?.[district] || [])];
+    }
+
+    function syncRegionSelection() {
+      if (selectedRegionCity === '전체') {
+        selectedRegionDistrict = '전체';
+        selectedRegionDong = '전체';
+        return;
+      }
+      const districts = getRegionDistricts(selectedRegionCity);
+      if (!districts.includes(selectedRegionDistrict)) {
+        selectedRegionDistrict = districts[0];
+      }
+      if (selectedRegionDistrict === '전체') {
+        selectedRegionDong = '전체';
+        return;
+      }
+      const dongs = getRegionDongs(selectedRegionCity, selectedRegionDistrict);
+      if (!dongs.includes(selectedRegionDong)) {
+        selectedRegionDong = dongs[0];
+      }
+    }
+
+    function formatRegionLabel(city, district, dong) {
+      if (city === '전체') return '전체';
+      if (district === '전체') return `${city} 전체`;
+      if (dong === '전체') return `${city} ${district} 전체`;
+      return `${city} ${district} ${dong}`;
+    }
+
+    function getActiveServiceGroup() {
+      const category = getActiveServiceCategory();
+      return category.groups.find((group) => group.id === activeServiceGroupId) || category.groups[0];
+    }
+
+    function renderServiceModal() {
+      if (!serviceModalOpen) return '';
+
+      const activeCategory = getActiveServiceCategory();
+      const activeGroup = getActiveServiceGroup();
+
+      return `
+        <div class="service-modal" onclick="closeServiceModal()">
+          <div class="service-modal-panel" onclick="event.stopPropagation()">
+            <div class="service-modal-head">
+              <div class="service-modal-title">서비스 추가</div>
+              <button type="button" class="service-modal-close" onclick="closeServiceModal()">×</button>
+            </div>
+            <div class="service-modal-body">
+              <div class="service-modal-main">
+                <div class="service-search">
+                  <div class="service-search-box">
+                    <span>⌕</span>
+                    <input type="text" placeholder="띄어쓰기 동일하게 입력해야 검색됩니다">
+                  </div>
+                </div>
+                <div class="service-top-cats">
+                  ${serviceModalCategories.map((category) => `
+                      <button type="button" class="service-top-cat ${category.id === activeCategory.id ? 'active' : ''}" onclick="setServiceCategory('${category.id}')">
+                      <span class="service-top-cat-icon">
+                        ${category.icon}
+                        <span class="service-level-toggle service-radio-toggle service-top-cat-toggle ${isSelectedItem(buildCategoryItem(category).key) ? 'checked' : ''}" onclick="event.stopPropagation(); toggleCategorySelection('${category.id}')"></span>
+                      </span>
+                      <span class="service-top-cat-label">${category.label}</span>
+                    </button>
+                  `).join('')}
+                </div>
+                <div class="service-picker">
+                  <div class="service-subcats">
+                    ${activeCategory.groups.map((group) => `
+                      <button type="button" class="service-subcat ${group.id === activeGroup.id ? 'active' : ''}" onclick="setServiceGroup('${group.id}')">
+                        <span>${group.label}</span>
+                        <span class="service-level-toggle ${isSelectedItem(buildGroupItem(group).key) ? 'checked' : ''}" onclick="event.stopPropagation(); toggleGroupSelection('${group.id}')"></span>
+                      </button>
+                    `).join('')}
+                  </div>
+                  <div class="service-list-shell">
+                    <div class="service-list-head">
+                      <div>${activeCategory.label.replace('/청소', '').replace('이사/청소', '이사')}</div>
+                      <div>${activeGroup.label}</div>
+                    </div>
+                    <div class="service-list">
+                      ${activeGroup.services.map((serviceName) => `
+                        <div class="service-row">
+                          <span>${serviceName}</span>
+                          <button type="button" class="service-check ${isSelectedItem(buildServiceItem(serviceName).key) ? 'checked' : ''}" onclick="toggleServiceSelection('${serviceName}')"></button>
+                        </div>
+                      `).join('')}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="service-modal-side">
+                <div class="service-selected-head">
+                  <span>선택한 서비스</span>
+                  <span>${selectedServiceItems.length}/20</span>
+                </div>
+                <div class="service-selected-list">
+                  ${selectedServiceItems.map((item) => `
+                    <div class="service-selected-item">
+                      <span>${item.label}</span>
+                      <button type="button" class="service-remove" onclick="removeSelectedItem('${item.key}')">×</button>
+                    </div>
+                  `).join('')}
+                </div>
+                <div class="service-modal-footer">
+                  <button type="button" class="service-submit ${selectedServiceItems.length ? 'active' : ''}" ${selectedServiceItems.length ? 'onclick="applySelectedServices()"' : ''}>등록하기</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
 
     function benefitRegisterView(isEdit = false) {
       return `
@@ -557,49 +957,54 @@
                 <div class="ff-grid">
                   <div class="ff">
                     <label>지역 <span class="req">*</span></label>
-                    <div class="triple-select">
-                      <select>
-                        <option>시</option>
-                        <option selected>서울특별시</option>
-                        <option>부산광역시</option>
-                        <option>대구광역시</option>
-                      </select>
-                      <select>
-                        <option>구</option>
-                        <option selected>강남구</option>
-                        <option>서초구</option>
-                        <option>송파구</option>
-                      </select>
-                      <select>
-                        <option>동</option>
-                        <option selected>역삼동</option>
-                        <option>논현동</option>
-                        <option>삼성동</option>
-                      </select>
+                    <div class="area-select-wrap">
+                      <div class="triple-select">
+                        <select onchange="setRegionCity(this.value)">
+                          ${['전체', ...Object.keys(regionOptions)].map((city) => `
+                            <option value="${city}" ${city === selectedRegionCity ? 'selected' : ''}>${city}</option>
+                          `).join('')}
+                        </select>
+                        <select onchange="setRegionDistrict(this.value)">
+                          ${getRegionDistricts(selectedRegionCity).map((district) => `
+                            <option value="${district}" ${district === selectedRegionDistrict ? 'selected' : ''}>${district}</option>
+                          `).join('')}
+                        </select>
+                        <select onchange="setRegionDong(this.value)">
+                          ${getRegionDongs(selectedRegionCity, selectedRegionDistrict).map((dong) => `
+                            <option value="${dong}" ${dong === selectedRegionDong ? 'selected' : ''}>${dong}</option>
+                          `).join('')}
+                        </select>
+                      </div>
+                      <button type="button" class="area-add-btn" onclick="addSelectedRegion()">지역 추가</button>
+                      ${appliedRegionItems.length ? `
+                        <div class="selected-service-stack">
+                          ${appliedRegionItems.map((areaLabel) => `
+                            <div class="selected-service-card">
+                              <span>${areaLabel}</span>
+                              <button type="button" class="selected-service-remove" onclick="removeAppliedRegion('${areaLabel}')">×</button>
+                            </div>
+                          `).join('')}
+                        </div>
+                      ` : `
+                        <div class="selected-service-empty">아직 추가된 지역이 없습니다.</div>
+                      `}
                     </div>
                   </div>
                   <div class="ff">
                     <label>서비스</label>
-                    <div class="triple-select">
-                      <select>
-                        <option>depth1 선택</option>
-                        <option selected>이사</option>
-                        <option>청소</option>
-                        <option>설치/수리</option>
-                      </select>
-                      <select>
-                        <option>depth2 선택</option>
-                        <option selected>가정이사</option>
-                        <option>원룸/소형이사</option>
-                        <option>사무실이사</option>
-                      </select>
-                      <select>
-                        <option>service 선택</option>
-                        <option selected>국내 이사</option>
-                        <option>가정이사(투룸 이상)</option>
-                        <option>원룸/소형 이사</option>
-                      </select>
-                    </div>
+                    <button type="button" class="service-trigger" onclick="openServiceModal()">서비스 등록하기</button>
+                    ${appliedServiceItems.length ? `
+                      <div class="selected-service-stack">
+                        ${appliedServiceItems.map((item) => `
+                          <div class="selected-service-card">
+                            <span>${item.label}</span>
+                            <button type="button" class="selected-service-remove" onclick="removeAppliedService('${item.key}')">×</button>
+                          </div>
+                        `).join('')}
+                      </div>
+                    ` : `
+                      <div class="selected-service-empty">아직 추가된 서비스가 없습니다.</div>
+                    `}
                   </div>
                   <div class="ff">
                     <label>견적 유형</label>
@@ -639,27 +1044,140 @@
           <button class="btn-back" onclick="showBenefitDashboard()">대시보드로</button>
           <button class="btn-save">${isEdit ? '수정' : '등록'}</button>
         </div>
+        ${renderServiceModal()}
       `;
     }
 
-    function showPromotionView() {
+    function showPromotionView(keepScroll = false) {
       setActiveMenu('benefit');
-      render(promotionView());
+      render(promotionView(), keepScroll);
     }
 
-    function showBenefitDashboard() {
+    function showBenefitDashboard(keepScroll = false) {
       setActiveMenu('benefit');
-      render(benefitDashboardView());
+      render(benefitDashboardView(), keepScroll);
     }
 
-    function showBenefitRegister(isEdit = false) {
+    function showBenefitRegister(isEdit = false, keepScroll = false) {
+      currentBenefitRegisterIsEdit = Boolean(isEdit);
       setActiveMenu('benefit');
-      render(benefitRegisterView(isEdit));
+      render(benefitRegisterView(isEdit), keepScroll);
     }
 
     function setBenefitConditionMode(mode, isEdit = false) {
       benefitConditionMode = mode;
-      showBenefitRegister(Boolean(isEdit));
+      showBenefitRegister(Boolean(isEdit), true);
+    }
+
+    function openServiceModal() {
+      selectedServiceItems = appliedServiceItems.map((item) => ({ ...item }));
+      serviceModalOpen = true;
+      showBenefitRegister(currentBenefitRegisterIsEdit, true);
+    }
+
+    function setRegionCity(city) {
+      selectedRegionCity = city;
+      syncRegionSelection();
+      showBenefitRegister(currentBenefitRegisterIsEdit, true);
+    }
+
+    function setRegionDistrict(district) {
+      selectedRegionDistrict = district;
+      syncRegionSelection();
+      showBenefitRegister(currentBenefitRegisterIsEdit, true);
+    }
+
+    function setRegionDong(dong) {
+      selectedRegionDong = dong;
+      showBenefitRegister(currentBenefitRegisterIsEdit, true);
+    }
+
+    function addSelectedRegion() {
+      syncRegionSelection();
+      const areaLabel = formatRegionLabel(selectedRegionCity, selectedRegionDistrict, selectedRegionDong);
+      if (!appliedRegionItems.includes(areaLabel)) {
+        appliedRegionItems = [...appliedRegionItems, areaLabel];
+      }
+      showBenefitRegister(currentBenefitRegisterIsEdit, true);
+    }
+
+    function removeAppliedRegion(areaLabel) {
+      appliedRegionItems = appliedRegionItems.filter((item) => item !== areaLabel);
+      showBenefitRegister(currentBenefitRegisterIsEdit, true);
+    }
+
+    function closeServiceModal() {
+      serviceModalOpen = false;
+      showBenefitRegister(currentBenefitRegisterIsEdit, true);
+    }
+
+    function setServiceCategory(categoryId) {
+      activeServiceCategoryId = categoryId;
+      const category = getActiveServiceCategory();
+      activeServiceGroupId = category.groups[0].id;
+      showBenefitRegister(currentBenefitRegisterIsEdit, true);
+    }
+
+    function setServiceGroup(groupId) {
+      activeServiceGroupId = groupId;
+      showBenefitRegister(currentBenefitRegisterIsEdit, true);
+    }
+
+    function toggleServiceSelection(serviceName) {
+      const item = buildServiceItem(serviceName);
+      if (isSelectedItem(item.key)) {
+        selectedServiceItems = selectedServiceItems.filter((selectedItem) => selectedItem.key !== item.key);
+      } else if (selectedServiceItems.length < 20) {
+        selectedServiceItems = [...selectedServiceItems, item];
+      }
+      showBenefitRegister(currentBenefitRegisterIsEdit, true);
+    }
+
+    function applySelectedServices() {
+      appliedServiceItems = selectedServiceItems.map((item) => ({ ...item }));
+      serviceModalOpen = false;
+      showBenefitRegister(currentBenefitRegisterIsEdit, true);
+    }
+
+    function toggleCategorySelection(categoryId) {
+      const category = serviceModalCategories.find((item) => item.id === categoryId);
+      if (!category) return;
+      const item = buildCategoryItem(category);
+      activeServiceCategoryId = categoryId;
+      activeServiceGroupId = category.groups[0].id;
+      if (isSelectedItem(item.key)) {
+        selectedServiceItems = selectedServiceItems.filter((selectedItem) => selectedItem.key !== item.key);
+      } else {
+        const withoutCategoryItems = selectedServiceItems.filter((selectedItem) => selectedItem.level !== 'category1');
+        if (withoutCategoryItems.length < 20) {
+          selectedServiceItems = [...withoutCategoryItems, item];
+        }
+      }
+      showBenefitRegister(currentBenefitRegisterIsEdit, true);
+    }
+
+    function toggleGroupSelection(groupId) {
+      const category = getActiveServiceCategory();
+      const group = category.groups.find((item) => item.id === groupId);
+      if (!group) return;
+      const item = buildGroupItem(group);
+      if (isSelectedItem(item.key)) {
+        selectedServiceItems = selectedServiceItems.filter((selectedItem) => selectedItem.key !== item.key);
+      } else if (selectedServiceItems.length < 20) {
+        selectedServiceItems = [...selectedServiceItems, item];
+      }
+      showBenefitRegister(currentBenefitRegisterIsEdit, true);
+    }
+
+    function removeSelectedItem(itemKey) {
+      selectedServiceItems = selectedServiceItems.filter((item) => item.key !== itemKey);
+      showBenefitRegister(currentBenefitRegisterIsEdit, true);
+    }
+
+    function removeAppliedService(itemKey) {
+      appliedServiceItems = appliedServiceItems.filter((item) => item.key !== itemKey);
+      selectedServiceItems = selectedServiceItems.filter((item) => item.key !== itemKey);
+      showBenefitRegister(currentBenefitRegisterIsEdit, true);
     }
 
     showPromotionView();
